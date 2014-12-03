@@ -16,29 +16,34 @@ Oh, and I also like to write press-releases in what I call "Oprah-speak" for mai
 Once the project moves into development, the press release can be used as a touchstone; a guiding light. The product team can ask themselves, "Are we building what is in the press release?" If they find they're spending time building things that aren't in the press release (overbuilding), they need to ask themselves why. This keeps product development focused on achieving the customer benefits and not building extraneous stuff that takes longer to build, takes resources to maintain, and doesn't provide real customer benefit (at least not enough to warrant inclusion in the press release).
  -->
  
-## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
-
-## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+## Snapshot Olympics ##
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > Organize photo contests for friends, family and more.
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > Wish you could have access to a collection of snapshots taken by everybody at an event? Ever wished you had an excuse to take wacky photos with all your friends?
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > Snapshot Olympics makes it easy to organize photo contests both publicly and privately, vote on submissions, and view collections during wrap-up.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > "Really, this is about getting together with a bunch of people and taking hilarious photos to remember a day by."
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > Create a contest
+  > Curate your own unique objectives
+  > Invite friends if you're going private, or...
+  > ...publicly broadcast local contests
+  > Submissions get displayed in real-time
+  > View and download the entire collection
 
-## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+## From the Users ##
+  > "My husband and I set up a hunt for our family and friends on our wedding day... Priceless. We hired a professional but when we look back on it all, the moments captured by our very own best friends mean a lot more to us. It was a big hit with everyone who participated."
+
+  > "Our company launch party was a bit out of control. Suffice to say our team has no shortage of inside jokes thanks to the hunt we set up with Snapshot Olympics."
+
+  > "A bunch of my friends and I are all hobby photographers. We love to pick a day, pick a place, pick a theme and just a take a bunch of photos! Photo Olympics adds an element of competition that really inspires us to up our game."
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > No more excuses. Take ALL the silly photos.
