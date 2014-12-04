@@ -1,5 +1,4 @@
 # Snapshot Olympics #
-=====================
 
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -33,7 +32,7 @@ Once the project moves into development, the press release can be used as a touc
   1. Create a contest
   2. Curate your own unique objectives
   3. Invite friends if you're going private, or...
-  4. ...publicly broadcast local contests
+  4. Publicly broadcast local contests
   5. Submissions get displayed in real-time
   6. View and download the entire collection
 
