@@ -46,6 +46,13 @@ bower install
 
 View the project roadmap [here](LINK_TO_PROJECT_ISSUES)
 
+### File Structure
+-client : All front-end files.  Does not see server file.
+-server : All back-end files.  Does not see client file.
+-libs : Common code like collections and utilities.
+-public : public assets (ie favicon)
+
+
 
 ## Contributing
 
