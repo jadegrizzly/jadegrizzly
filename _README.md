@@ -1,12 +1,12 @@
-# Project Name
+# Snapshot Olympics
 
-> Pithy project description
+> Organized photo contests for friends, family and more.
 
 ## Team
 
-  - __Product Owner__: teamMember
-  - __Scrum Master__: teamMember
-  - __Development Team Members__: teamMember, teamMember
+  - __Product Owner__: Christian Perez
+  - __Scrum Master__: Corey Asato
+  - __Development Team Members__: Rene Polo, David Raleigh
 
 ## Table of Contents
 
@@ -24,11 +24,10 @@
 
 ## Requirements
 
+- Mongodb 1.4.x
+- Express 4.10.x
+- Angular 1.3.x
 - Node 0.10.x
-- Redis 2.6.x
-- Postgresql 9.1.x
-- etc
-- etc
 
 ## Development
 
@@ -44,7 +43,7 @@ bower install
 
 ### Roadmap
 
-View the project roadmap [here](LINK_TO_PROJECT_ISSUES)
+View the project roadmap [here](https://github.com/jadegrizzly/jadegrizzly/issues)
 
 
 ## Contributing
