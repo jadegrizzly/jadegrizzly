@@ -1,18 +1,11 @@
-<<<<<<< HEAD
-<template name="create">
-  <h1 class="title">
-    {{newGame}}
-  </h1>
-=======
 <template name="createGame">
->>>>>>> working on sessions
 
   <form class="new-game">
     <input type="text" name="name-game" placeholder="Name your game">
   </form>
 
   <ul class="feats">
-  {{log feats}}
+    {{log feats}}
     {{#each feats}}
       {{> userEvent}}
     {{/each}}
@@ -21,20 +14,17 @@
   <form class="new-event">
     <input type="text" name="add-events" placeholder="Add events" class=""/>
   </form>
-<<<<<<< HEAD
-=======
 
 </template>
 
 <template name="userEvent">
-<<<<<<< HEAD
   {{#if event}}
     <li>{{event}}</li>
   {{/if}}
->>>>>>> working on sessions
-=======
+
   {{ log feat }}
   <li>{{feat}}</li>
   
->>>>>>> working on events
+  <li>{{name}}</li>  
+
 </template>

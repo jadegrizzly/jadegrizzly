@@ -1,9 +1,11 @@
 Players = new Meteor.Collection('players');
 Games = new Meteor.Collection('games');
+Feats = new Meteor.Collection('feats');
 
 Meteor.subscribe('players');
 Meteor.subscribe('users');
 Meteor.subscribe('games');
+Meteor.subscribe('feats');
 
 Template.registerHelper('log', function(something) {
   console.log(something);
@@ -28,18 +30,13 @@ Template.userList.helpers({
  * Game Helpers
  */
 
-// Template.createGame.helpers = function() {
-//   return Session.get('edit-' + this._id);
-// };
-
-// Session.set('feats', ['test']);
 Games.insert({
-  featList: [{'feat': 'test1'},{'feat': 'test2'}]
+  featList: [{'name': 'test1'},{'name': 'test2'}]
 });
 
 Template.createGame.helpers({
   feats: function() {
-    return Games.find({}, {});
+    return Feats.find().fetch();
   }
 });
 

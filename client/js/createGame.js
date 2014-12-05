@@ -5,7 +5,6 @@
 // Meteor.subscribe('users');
 // Meteor.subscribe('games');
 
-<<<<<<< HEAD
 Template.createGame.helpers({
   createGame: function() {
     var gameObj = {
@@ -25,10 +24,8 @@ Template.createGame.helpers({
   addFeatItem: function(gameId, featItem) {
     Meteor.call('gamesUpsert', gameId, {$push:{featList: featItem}});
   }
-
-<<<<<<< HEAD
 });
-=======
+
 
 Template.createGame.helpers({
   verifyEvents: function(eventList) {
@@ -64,4 +61,4 @@ Template.createGame.helpers({
   }
 };
 
->>>>>>> working on events
+
