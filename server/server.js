@@ -58,10 +58,6 @@ Meteor.publish('feats', function() {
   return Games.find({}, {fields: {featList: 1}});
 });
 
-Games.insert({
-  featList: [{'name': 'test1'},{'name': 'test2'}]
-});
-
 Games.remove({});
 
 /**

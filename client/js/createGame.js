@@ -5,7 +5,9 @@
 // Meteor.subscribe('users');
 // Meteor.subscribe('games');
 
+
 Template.createGame.helpers({
+
   updateGameName: function(gameId, gameName) {
     Games.update(gameId, {$set: {gameName: gameName}});
   },

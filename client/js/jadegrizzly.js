@@ -30,25 +30,20 @@ Template.userList.helpers({
  * Game Helpers
  */
 
-Games.insert({
-  featList: [{'name': 'test1'},{'name': 'test2'}]
-});
-
-Template.createGame.helpers({
+Template.create.helpers({
   feats: function() {
-    return Feats.find().fetch();
+    return Feats.find();
   }
 });
 
-Template.createGame.events({
+Template.create.events({
   'submit form.new-event': function(evt, template) {
     evt.preventDefault();
 
-    var value = template.find('.add-events').value;
-    console.log(value);
-
-    Session.set('feats', [value]);
-
+    var value = template.find('.addEvents').value;
+    Feats.insert({
+      name: value
+    });
   }
 });
 
