@@ -14,6 +14,10 @@ Router.route('/create', function(){
   this.render('create');
 });
 
+Router.route('/game', function(){
+  this.render('game');
+});
+
 // Accounts.onLogin(function(){
 //   console.log('Login success');
 //   Router.render('menu');

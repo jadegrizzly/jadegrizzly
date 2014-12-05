@@ -1,0 +1,16 @@
+<template name="game">
+  <h1 class="title">
+    {{newGame}}
+  </h1>
+
+  <ul>
+    {{#each events}}
+      {{> event}}
+    {{/each}}
+  </ul>
+
+  <div class="footer">
+    <button class="navigate-photos">Photos</button>
+    <button class="navigate-events">Events</button>
+  </div>
+</template>
