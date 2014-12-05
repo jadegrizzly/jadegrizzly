@@ -21,9 +21,35 @@ Template.userList.helpers({
   }
 });
 
-Meteor.call('playersUpsert', Meteor.userId(), 
-            {$push:{ 'imageList': {image_url: '', game_name: '', event_name: ''}}});
+// Meteor.call('playersUpsert', Meteor.userId(), 
+//             {$push:{ 'imageList': {image_url: '', game_name: '', event_name: ''}}});
 
-console.log(Meteor.userId());
+/**
+ * Game Helpers
+ */
 
+// Template.createGame.helpers = function() {
+//   return Session.get('edit-' + this._id);
+// };
+
+// Session.set('feats', ['test']);
+var array = [];
+
+Template.createGame.helpers({
+  feats: function() {
+    return Session.get('feats');
+  }
+});
+
+Template.createGame.events({
+  'submit form.new-event': function(evt, template) {
+    evt.preventDefault();
+
+    var value = template.find('.add-events').value;
+    console.log(value);
+
+    Session.set('feats', [value]);
+
+  }
+});
 
