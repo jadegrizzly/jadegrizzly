@@ -1,1 +1,105 @@
-/* CSS declarations go here */
+/* IMPORTED STYLES */
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+
+/*
+orange: #fa9f29
+green: #0a633d
+*/
+
+/* GLOBAL STYLES */
+html, body {
+  background-color: #2ae8db;
+  color: white;
+  display: block;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  height: 100%;
+  line-height: 2.4em;
+}
+
+.wrapper {
+  margin: 75px auto 0 auto;
+  text-align: center;
+  width: 360px;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 300px) {
+  body {
+    font-size: 18px;
+  }
+  .title {
+    font-size: 50px;
+    margin-bottom: 40px;
+  }
+}
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) {
+  body {
+    font-size: 18px;
+  }
+  .title {
+    font-size: 60px;
+    margin-bottom: 40px;
+  }
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+  .title {
+    font-size: 70px;
+    margin-bottom: 40px;
+  }
+}
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+  .title {
+    font-size: 80px;
+    margin-bottom: 40px;
+  }
+}
+
+/* FORM INPUTS */
+input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  color: salmon;
+  margin-left: 15px;
+  text-decoration: none;
+  -webkit-appearance: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+#login-email {
+  margin-left: 10px;
+}
+
+/* LINKS */
+a {
+  color: salmon;
+  cursor: pointer;
+  padding-bottom: 2px;
+}
+
+a:hover {
+  color: salmon;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
+
+#login-email-label {
+  margin-left: 30px;
+  margin-right: 7px;
+}
