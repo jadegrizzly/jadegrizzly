@@ -37,6 +37,7 @@ Games.allow({
   }
 });
 
+
 /**
  * Publish To Client
  */
@@ -52,6 +53,16 @@ Meteor.publish('users', function() {
 Meteor.publish('games', function() {
   return Games.find();
 });
+
+Meteor.publish('feats', function() {
+  return Games.find({}, {fields: {featList: 1}});
+});
+
+Games.insert({
+  featList: [{'name': 'test1'},{'name': 'test2'}]
+});
+
+Games.remove({});
 
 /**
  * Server Methods
