@@ -14,10 +14,15 @@ Router.route('/create', function(){
   this.render('create');
 });
 
-Accounts.onLogin(function(){
-  console.log('Login success');
-  Router.render('menu');
+Router.route('/game', function(){
+  this.render('game');
 });
+
+// Accounts.onLogin(function(){
+//   console.log('Login success');
+//   Router.render('menu');
+// });
+// 
 // Router.onBeforeAction(function() {
 //   if (! Meteor.userId()) {
 //     this.render('layout');

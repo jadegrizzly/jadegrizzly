@@ -17,10 +17,18 @@ html, body {
   line-height: 2.4em;
 }
 
+#main {
+  overflow: auto;
+  padding-bottom: 150px;
+}
+
 .wrapper {
-  margin: 75px auto 0 auto;
+  height: auto;
+  min-height: 100%;
+  margin: 75px auto -150px;
+  padding: 0 0 150px;
   text-align: center;
-  width: 360px;
+  min-width: 360px;
 }
 
 /* MEDIA QUERIES */
@@ -119,3 +127,6 @@ a:hover {
 ul, li {
   text-align: left;
 }
+
+/* FOOTER */
+.footer-buttons {}
