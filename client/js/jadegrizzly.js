@@ -33,11 +33,13 @@ Template.userList.helpers({
 // };
 
 // Session.set('feats', ['test']);
-var array = [];
+Games.insert({
+  featList: [{'feat': 'test1'},{'feat': 'test2'}]
+});
 
 Template.createGame.helpers({
   feats: function() {
-    return Session.get('feats');
+    return Games.find({}, {});
   }
 });
 

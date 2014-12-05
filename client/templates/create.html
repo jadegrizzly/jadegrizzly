@@ -12,14 +12,14 @@
   </form>
 
   <ul class="feats">
-    <!-- {{#each feats}}
+  {{log feats}}
+    {{#each feats}}
       {{> userEvent}}
-    {{/each}} -->
-    {{feats}}
+    {{/each}}
   </ul>
 
   <form class="new-event">
-    <input type="text" name="add-events" placeholder="Add events" class="add-events"/>
+    <input type="text" name="add-events" placeholder="Add events" class=""/>
   </form>
 <<<<<<< HEAD
 =======
@@ -27,8 +27,14 @@
 </template>
 
 <template name="userEvent">
+<<<<<<< HEAD
   {{#if event}}
     <li>{{event}}</li>
   {{/if}}
 >>>>>>> working on sessions
+=======
+  {{ log feat }}
+  <li>{{feat}}</li>
+  
+>>>>>>> working on events
 </template>
