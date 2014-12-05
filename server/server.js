@@ -10,33 +10,29 @@ Games = new Meteor.Collection('games');
  */
 
 Players.allow({
-  insert: function (userId, post) {
-    // can only create posts where you are the author
+  insert: function (userId, doc) {
+    // can only create docs where you are the author
     return true;
   },
-  remove: function (userId, post) {
-    // can only delete your own posts
+  remove: function (userId, doc) {
+    // can only delete your own docs
     return true;
   },
-  // since there is no update field, all updates
-  // are automatically denied
-  update: function(userId, post) {
+  update: function(userId, doc) {
     return true;
   }
 });
 
 Games.allow({
-  insert: function (userId, post) {
-    // can only create posts where you are the author
+  insert: function (userId, doc) {
+    // can only create docs where you are the author
     return true;
   },
-  remove: function (userId, post) {
-    // can only delete your own posts
+  remove: function (userId, doc) {
+    // can only delete your own docs
     return true;
   },
-  // since there is no update field, all updates
-  // are automatically denied
-  update: function(userId, post) {
+  update: function(userId, doc) {
     return true;
   }
 });
@@ -54,7 +50,7 @@ Meteor.publish('users', function() {
 });
 
 Meteor.publish('games', function() {
-  return Meteor.find();
+  return Games.find();
 });
 
 /**
