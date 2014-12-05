@@ -24,13 +24,5 @@ Template.createGame.helpers({
   addFeatItem: function(gameId, featItem) {
     Meteor.call('gamesUpsert', gameId, {$push:{featList: featItem}});
   }
+
 });
-
-
-
-
-
-
-
-
-
