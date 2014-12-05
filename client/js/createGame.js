@@ -18,7 +18,7 @@ Template.createGame.helpers({
   },
 
   updateGameName: function(gameId, gameName) {
-    Games.update(gameId, {$set{gameName: gameName}});
+    Games.update(gameId, {$set: {gameName: gameName}});
   },
 
   addFeatItem: function(gameId, featItem) {
