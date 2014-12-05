@@ -62,3 +62,9 @@ Meteor.methods({
     Players.upsert(id, doc);
   }
 });
+
+Meteor.methods({
+  gamesUpsert: function(id, doc) {
+    Games.upsert(id, doc);
+  }
+});
