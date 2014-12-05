@@ -13,20 +13,11 @@ html, body {
   display: block;
   font-family: Lato, Helvetica, Arial, sans-serif;
   font-weight: 300;
-  height: 100%;
   line-height: 2.4em;
 }
 
-#main {
-  overflow: auto;
-  padding-bottom: 150px;
-}
-
 .wrapper {
-  height: auto;
-  min-height: 100%;
-  margin: 75px auto -150px;
-  padding: 0 0 150px;
+  margin: 75px auto 0 auto;
   text-align: center;
   min-width: 360px;
 }
@@ -129,4 +120,25 @@ ul, li {
 }
 
 /* FOOTER */
-.footer-buttons {}
+.footer {
+  left: 0;
+  bottom: 0;
+  /*opacity: .25;*/
+  position: fixed;
+  width: 100%;
+}
+
+button {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  height: 60px;
+  width: 48%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+button:hover {
+  border: 1px solid lightsalmon;
+  color: salmon;
+}

@@ -3,7 +3,11 @@ Router.configure({
 });
 
 Router.route('/', function() {
-  this.render('home');
+  if (Meteor.user()) {
+    Router.go('/menu');
+  } else {
+    this.render('home');
+  }
 });
 
 Router.route('/menu', function(){
@@ -18,20 +22,16 @@ Router.route('/game', function(){
   this.render('game');
 });
 
-// Accounts.onLogin(function(){
-//   console.log('Login success');
-//   Router.render('menu');
-// });
-// 
-// Router.onBeforeAction(function() {
-//   if (! Meteor.userId()) {
-//     this.render('layout');
-//   } else {
-//     this.next();
-//   }
-// });
+Router.route('/photos', function(){
+  this.render('photos');
+});
 
-// Tracker.autorun(function() {
-//   if (Router.current().route.name === 'home' && Meteor.user() !== null)
-//     Router.go('menu');
-// });
+AccountsTemplates.configureRoute('signIn');
+
+AccountsTemplates.configureRoute('signIn', {
+    name: 'signin',
+    path: '/home',
+    template: 'home',
+    layoutTemplate: 'layout',
+    redirect: '/menu',
+});
