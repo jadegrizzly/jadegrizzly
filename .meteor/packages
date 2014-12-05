@@ -9,4 +9,5 @@ iron:router
 accounts-ui-unstyled
 useraccounts:unstyled
 accounts-password
+mizzao:autocomplete
 
