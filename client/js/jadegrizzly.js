@@ -1,23 +1,29 @@
-if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault("counter", 0);
+Players = new Meteor.Collection('players');
+Games = new Meteor.Collection('games');
 
-//   Template.Home.helpers({
-//     counter: function () {
-//       return Session.get("counter");
-//     }
-//   });
+Meteor.subscribe('players');
+Meteor.subscribe('users');
+Meteor.subscribe('games');
 
-//   Template.Home.events({
-//     'click button': function () {
-//       // increment the counter when button is clicked
-//       Session.set("counter", Session.get("counter") + 1);
-//     }
-//   });
- }
+Template.registerHelper('log', function(something) {
+  console.log(something);
+});
 
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-  });
-}
+Template.userList.helpers({
+  allUsers: function() {
+    return Meteor.users.find().fetch();
+  }
+});
+
+Template.userList.helpers({
+  user: function() {
+    return Meteor.users.find();
+  }
+});
+
+Meteor.call('playersUpsert', Meteor.userId(), 
+            {$push:{ 'imageList': {image_url: '', game_name: '', event_name: ''}}});
+
+console.log(Meteor.userId());
+
+
