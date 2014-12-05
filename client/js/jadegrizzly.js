@@ -32,6 +32,7 @@ Template.userList.helpers({
 
 Template.create.helpers({
   feats: function() {
+    console.log(Feats.find());
     return Feats.find();
   }
 });
@@ -41,9 +42,8 @@ Template.create.events({
     evt.preventDefault();
 
     var value = template.find('.addEvents').value;
-    Feats.insert({
-      name: value
-    });
+
+    Meteor.call('gamesUpsert', Session.get('currentGameId'), {$push:{featList: value}});
   }
 });
 
