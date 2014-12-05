@@ -1,23 +1,17 @@
+// Meteor.subscribe("usersData");
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault("counter", 0);
 
-//   Template.Home.helpers({
-//     counter: function () {
-//       return Session.get("counter");
-//     }
-//   });
+  // Meteor.subscribe("usersData");
 
-//   Template.Home.events({
-//     'click button': function () {
-//       // increment the counter when button is clicked
-//       Session.set("counter", Session.get("counter") + 1);
-//     }
-//   });
- }
-
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
+  Template.registerHelper("log", function(something) {
+    console.log(something);
   });
+
+  Template.userList.helpers({
+    users: function() {
+      return Meteor.users.find({}, {emails: 1});
+    }
+  });
+
 }
+

@@ -1,5 +1,22 @@
 <template name="home">
   <div>
     {{> loginButtons}}
+    {{#if currentUser}}
+      {{> userList}}
+    {{/if}}
   </div>
+</template>
+
+<template name="userList">
+  <h1> Users </h1>
+  <ul>
+    {{log users}}
+    {{#each users}}
+      {{> userItem}}
+    {{/each}}
+  </ul>
+</template>
+
+<template name="userItem">
+  <li>{{username}}</li>
 </template>
