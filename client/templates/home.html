@@ -10,13 +10,12 @@
 <template name="userList">
   <h1> Users </h1>
   <ul>
-    {{log users}}
-    {{#each users}}
+    {{#each allUsers}}
       {{> userItem}}
     {{/each}}
   </ul>
 </template>
 
 <template name="userItem">
-  <li>{{username}}</li>
+  <li>{{user}}</li>
 </template>
