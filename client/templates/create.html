@@ -1,0 +1,17 @@
+<template name="create">
+
+  <form class="new-game">
+    <input type="text" name="name-game" placeholder="Name your game">
+  </form>
+
+  <ul class="events">
+    {{#each events}}
+      {{> event}}
+    {{/each}}
+  </ul>
+
+  <form class="new-event">
+    <input type="text" name="add-events" placeholder="Add events">
+  </form>
+
+</template>
