@@ -1,6 +1,7 @@
 <template name="create">
-  <form class="new-task">
-    <input type="text" id="name-game" placeholder="Name your game">
+
+  <form class="new-game">
+    <input type="text" name="name-game" placeholder="Name your game">
   </form>
 
   <ul class="events">
@@ -9,9 +10,8 @@
     {{/each}}
   </ul>
 
-  <input type="text" id="add-events" placeholder="Add events">
-</template>
+  <form class="new-event">
+    <input type="text" name="add-events" placeholder="Add events">
+  </form>
 
-<template name="event">
-  <li><a href="/camera">{{text}}</a></li>
 </template>

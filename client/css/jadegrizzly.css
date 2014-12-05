@@ -67,6 +67,11 @@ html, body {
   }
 }
 
+/* FORMS */
+.new-game {
+  margin-bottom: 20px;
+}
+
 /* FORM INPUTS */
 input {
   background: none;
