@@ -27,6 +27,11 @@ Router.route('/photos', function(){
   this.render('photos');
 });
 
+Router.route('/current', function(){
+
+  this.render('public_games');
+});
+
 AccountsTemplates.configureRoute('signIn', {
     name: 'signin',
     path: '/home',
