@@ -1,4 +1,3 @@
-// Games = new Meteor.Collection('games');
 
 Template.publicGames.helpers({
   settings: {
