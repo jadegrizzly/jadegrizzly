@@ -1,11 +1,6 @@
 /* IMPORTED STYLES */
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
 
-/*
-orange: #fa9f29
-green: #0a633d
-*/
-
 /* GLOBAL STYLES */
 html, body {
   background-color: #2ae8db;
@@ -17,7 +12,7 @@ html, body {
 }
 
 .wrapper {
-  margin: 75px auto 0 auto;
+  margin: 50px auto 0 auto;
   text-align: center;
   min-width: 360px;
 }
@@ -25,7 +20,22 @@ html, body {
 /* MEDIA QUERIES */
 @media only screen and (min-width: 300px) {
   body {
-    font-size: 18px;
+    font-size: 20px;
+  }
+  .title {
+    font-size: 50px;
+    margin-bottom: 40px;
+  }
+  ul {
+    width: 260px;
+    margin: 0 auto 0 auto;
+  }
+}
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) {
+  body {
+    font-size: 20px;
   }
   .title {
     font-size: 50px;
@@ -33,10 +43,10 @@ html, body {
   }
 }
 
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) {
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) {
   body {
-    font-size: 18px;
+    font-size: 24px;
   }
   .title {
     font-size: 60px;
@@ -44,25 +54,18 @@ html, body {
   }
 }
 
-/* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) {
-  body {
-    font-size: 20px;
-  }
-  .title {
-    font-size: 70px;
-    margin-bottom: 40px;
-  }
-}
-
 /* TABLET LANDSCAPE / DESKTOP */
 @media only screen and (min-width: 1024px) {
   body {
-    font-size: 20px;
+    font-size: 30px;
   }
   .title {
     font-size: 80px;
     margin-bottom: 40px;
+  }
+  ul {
+    width: 340px;
+    margin: 0 auto 0 auto;
   }
 }
 
@@ -76,7 +79,7 @@ input {
   background: none;
   border: none;
   border-bottom: 1px solid white;
-  color: salmon;
+  color: steelblue;
   margin-left: 15px;
   text-decoration: none;
   -webkit-appearance: none;
@@ -91,19 +94,19 @@ input:focus {
 }
 
 #login-email-label {
-  margin-left: 30px;
-  margin-right: 7px;
+  margin-left: 38px;
+  margin-right: 5px;
 }
 
 /* LINKS */
 a {
-  color: salmon;
+  color: steelblue;
   cursor: pointer;
-  padding-bottom: 2px;
+  padding-bottom: 4px;
 }
 
 a:hover {
-  color: salmon;
+  color: steelblue;
   text-decoration: none;
   border-bottom: 1px solid white;
 }
@@ -119,11 +122,23 @@ ul, li {
   text-align: left;
 }
 
+.remove {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  font-size: 14px;
+}
+
+.remove:hover {
+  color: steelblue;
+}
+
+.remove {}
+
 /* FOOTER */
 .footer {
   left: 0;
   bottom: 0;
-  /*opacity: .25;*/
   position: fixed;
   width: 100%;
 }
@@ -139,6 +154,34 @@ button {
 }
 
 button:hover {
-  border: 1px solid lightsalmon;
-  color: salmon;
+  border: 1px solid steelblue;
+  color: steelblue;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* LOGOUT */
+.logout {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 1px solid white;
+  border-radius: 100%;
+  margin: 15px 15px 0 0;
+  height: 32px;
+  width: 32px;
+}
+
+.logout:hover {
+  border: 1px solid steelblue;
+  color: steelblue;
+  cursor: pointer;
+}
+
+.inner {
+  font-size: 14px;
+  position: relative;
+  bottom: 8px;
 }
