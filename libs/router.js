@@ -27,6 +27,8 @@ Router.route('/photos', function(){
   this.render('photos');
 });
 
+
+//RP: public_games route
 Router.route('/current', function(){
 
   this.render('public_games');
