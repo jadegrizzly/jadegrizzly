@@ -30,14 +30,22 @@ Template.userList.helpers({
  * Game Helpers
  */
 
-Template.create.helpers({
+Template.createGame.helpers({
   feats: function() {
     console.log(Feats.find());
     return Feats.find();
   }
 });
 
-Template.create.events({
+Template.createGame.events({
+  'submit form.new-game': function(evt, template) {
+    evt.preventDefault();
+
+    var value = template.find('.gameName').value;
+
+    Meteor.call('gamesUpsert', Session.get('currentGameId'), {$set: {gameName: value}});
+  },
+
   'submit form.new-event': function(evt, template) {
     evt.preventDefault();
 

@@ -15,7 +15,7 @@ Router.route('/menu', function(){
 });
 
 Router.route('/create', function(){
-  this.render('create');
+  this.render('createGame');
 });
 
 Router.route('/game', function(){
