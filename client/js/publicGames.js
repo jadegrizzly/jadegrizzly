@@ -1,5 +1,5 @@
-Games = new Meteor.Collection('games');
-// Games = new Mongo.Collection(null);
+// Games = new Meteor.Collection('games');
+Games = new Mongo.Collection(null);
 
 Template.publicGames.helpers({
   settings: {
