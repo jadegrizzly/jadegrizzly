@@ -30,14 +30,25 @@ Template.userList.helpers({
  * Game Helpers
  */
 
+<<<<<<< HEAD
 Template.createGame.helpers({
   feats: function() {
     console.log(Feats.find());
     return Feats.find();
+=======
+Games.insert({
+  featList: [{'name': 'test1'},{'name': 'test2'}]
+});
+
+Template.createGame.helpers({
+  feats: function() {
+    return Feats.find().fetch();
+>>>>>>> ca97f31cb7a652f9f9b4b5db29be465818457f5f
   }
 });
 
 Template.createGame.events({
+<<<<<<< HEAD
   'submit form.new-game': function(evt, template) {
     evt.preventDefault();
 
@@ -52,6 +63,16 @@ Template.createGame.events({
     var value = template.find('.addEvents').value;
 
     Meteor.call('gamesUpsert', Session.get('currentGameId'), {$push:{featList: value}});
+=======
+  'submit form.new-event': function(evt, template) {
+    evt.preventDefault();
+
+    var value = template.find('.add-events').value;
+    console.log(value);
+
+    Session.set('feats', [value]);
+
+>>>>>>> ca97f31cb7a652f9f9b4b5db29be465818457f5f
   }
 });
 

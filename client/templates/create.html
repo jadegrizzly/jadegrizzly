@@ -5,17 +5,37 @@
   </form>
 
   <ul class="feats">
+<<<<<<< HEAD
+=======
+    {{log feats}}
+>>>>>>> ca97f31cb7a652f9f9b4b5db29be465818457f5f
     {{#each feats}}
       {{> userEvent}}
     {{/each}}
   </ul>
 
   <form class="new-event">
+<<<<<<< HEAD
     <input type="text" name="add-events" placeholder="Add events" class="addEvents"/>
+=======
+    <input type="text" name="add-events" placeholder="Add events" class=""/>
+>>>>>>> ca97f31cb7a652f9f9b4b5db29be465818457f5f
   </form>
 
 </template>
 
 <template name="userEvent">
+<<<<<<< HEAD
   <li>{{name}}</li>
+=======
+  {{#if event}}
+    <li>{{event}}</li>
+  {{/if}}
+
+  {{ log feat }}
+  <li>{{feat}}</li>
+  
+  <li>{{name}}</li>  
+
+>>>>>>> ca97f31cb7a652f9f9b4b5db29be465818457f5f
 </template>
