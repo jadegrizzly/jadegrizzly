@@ -27,10 +27,3 @@ Router.route('/photos', function(){
   this.render('photos');
 });
 
-AccountsTemplates.configureRoute('signIn', {
-    name: 'signin',
-    path: '/home',
-    template: 'home',
-    layoutTemplate: 'layout',
-    redirect: '/menu',
-});
