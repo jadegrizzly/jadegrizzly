@@ -1,5 +1,9 @@
 <template name="createGame">
 
+  <div class="logout">X</div>
+
+  <h1 class="title">Game Setup</h1>
+
   <form class="new-game" autocomplete='off'>
     <input type="text" name="name-game" placeholder="Name your game" class="gameName">
   </form>
@@ -13,6 +17,11 @@
   <form class="new-event" autocomplete='off'>
     <input type="text" name="add-events" placeholder="Add events" class="addEvents"/>
   </form>
+
+  <div class="footer">
+    <button class="cancel-game">Cancel</button>
+    <button class="create-game">Create</button>
+  </div>
 
 </template>
 

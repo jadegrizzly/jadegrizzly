@@ -142,3 +142,25 @@ button:hover {
   border: 1px solid lightsalmon;
   color: salmon;
 }
+
+button:focus {
+  outline: none;
+}
+
+/* LOGOUT */
+.logout {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 1px solid white;
+  border-radius: 100%;
+  margin: 10px 10px 0 0;
+  height: 40px;
+  width: 40px;
+}
+
+.logout:hover {
+  border: 1px solid salmon;
+  color: salmon;
+  cursor: pointer;
+}
