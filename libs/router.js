@@ -15,18 +15,17 @@ Router.route('/menu', function(){
 });
 
 Router.route('/create', function(){
-  this.render('create');
+  this.render('createGame');
 });
 
 Router.route('/game', function(){
   this.render('game');
 });
 
+
 Router.route('/photos', function(){
   this.render('photos');
 });
-
-AccountsTemplates.configureRoute('signIn');
 
 AccountsTemplates.configureRoute('signIn', {
     name: 'signin',

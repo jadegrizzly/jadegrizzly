@@ -1,7 +1,6 @@
 /**
  * Create Collections
  */
-
 Players = new Meteor.Collection('players');
 Games = new Meteor.Collection('games');
 
@@ -37,6 +36,7 @@ Games.allow({
   }
 });
 
+
 /**
  * Publish To Client
  */
@@ -52,6 +52,11 @@ Meteor.publish('users', function() {
 Meteor.publish('games', function() {
   return Games.find();
 });
+
+Meteor.publish('feats', function() {
+  return Games.find({}, {fields: {featList: 1}});
+});
+
 
 /**
  * Server Methods

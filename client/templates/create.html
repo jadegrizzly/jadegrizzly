@@ -1,19 +1,22 @@
-<template name="create">
-  <h1 class="title">
-    {{newGame}}
-  </h1>
+<template name="createGame">
 
   <form class="new-game">
-    <input type="text" name="name-game" placeholder="Name your game">
+    <input type="text" name="name-game" placeholder="Name your game" class="gameName">
   </form>
 
-  <ul class="events">
-    {{#each events}}
-      {{> event}}
+  <ul class="feats">
+    {{log feats}}
+    {{#each feats}}
+      {{> userEvent}}
     {{/each}}
   </ul>
 
   <form class="new-event">
-    <input type="text" name="add-events" placeholder="Add events">
+    <input type="text" name="add-events" placeholder="Add events" class="addEvents"/>
   </form>
+
+</template>
+
+<template name="userEvent">
+  <li>{{name}}</li>
 </template>
