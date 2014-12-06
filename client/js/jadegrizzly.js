@@ -31,10 +31,10 @@ Template.userList.helpers({
  * Game Helpers
  */
 
-
 Template.createGame.helpers({
   feats: function() {
-    return Games.find();
+    var gameId = Session.get('currentGameId');
+    return Games.findOne({_id: gameId});
   }
 });
 
@@ -50,9 +50,11 @@ Template.createGame.events({
   'submit form.new-event': function(evt, template) {
     evt.preventDefault();
 
-    var value = template.find('.addEvents').value;
+    var input = template.find('.addEvents');
 
-    Meteor.call('gamesUpsert', Session.get('currentGameId'), {$push:{featList: value}});
+    Meteor.call('gamesUpsert', Session.get('currentGameId'), {$push:{featList: input.value}});
+
+    input.value = '';
   }
 });
 
