@@ -1,22 +1,21 @@
 <template name="createGame">
 
-  <form class="new-game">
+  <form class="new-game" autocomplete='off'>
     <input type="text" name="name-game" placeholder="Name your game" class="gameName">
   </form>
 
   <ul class="feats">
-    {{log feats}}
-    {{#each feats}}
+    {{#each feats.featList}}
       {{> userEvent}}
     {{/each}}
   </ul>
 
-  <form class="new-event">
+  <form class="new-event" autocomplete='off'>
     <input type="text" name="add-events" placeholder="Add events" class="addEvents"/>
   </form>
 
 </template>
 
 <template name="userEvent">
-  <li>{{name}}</li>
+  <li>{{this}}</li>
 </template>
