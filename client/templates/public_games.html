@@ -1,9 +1,10 @@
 <template name="publicGames">
-    <div class="well">
-        {{> inputAutocomplete settings=settings id="gameName" class="form-control " name="gameName" placeholder="gameName" }}
+    <div class="">
+        {{> inputAutocomplete settings=settings id="gameName" class="searchingGame " name="gameName" placeholder="gameName" }}
     </div>
+    <a href="/menu">Go back</a>
 </template>
 
 <template name="games">
-    <span style="color: {{color}}; color: #000;">{{gameName}}</span> 
+    <span style=" color: #000;">{{gameName}}</span> 
 </template>
