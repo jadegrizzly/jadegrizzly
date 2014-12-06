@@ -32,3 +32,4 @@ Router.route('/photos', function(){
 Router.route('/current', function(){
 
   this.render('public_games');
+});
