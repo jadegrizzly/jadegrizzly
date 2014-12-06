@@ -61,10 +61,6 @@ Template.createGame.events({
     Router.go('/menu');
   },
 
-  'click .create-game': function(evt, template) {
-    Router.go('/photos');
-  },
-
   'click .logout': function(evt, template) {
     console.log('Logging user out...');
     Meteor.logout(function(err) {

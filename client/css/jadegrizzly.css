@@ -27,7 +27,7 @@ html, body {
     margin-bottom: 40px;
   }
   ul {
-    width: 275px;
+    width: 260px;
     margin: 0 auto 0 auto;
   }
 }
@@ -122,6 +122,19 @@ ul, li {
   text-align: left;
 }
 
+.remove {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  font-size: 14px;
+}
+
+.remove:hover {
+  color: steelblue;
+}
+
+.remove {}
+
 /* FOOTER */
 .footer {
   left: 0;
@@ -156,9 +169,9 @@ button:focus {
   right: 0;
   border: 1px solid white;
   border-radius: 100%;
-  margin: 10px 10px 0 0;
-  height: 40px;
-  width: 40px;
+  margin: 15px 15px 0 0;
+  height: 32px;
+  width: 32px;
 }
 
 .logout:hover {
@@ -168,6 +181,7 @@ button:focus {
 }
 
 .inner {
+  font-size: 14px;
   position: relative;
-  bottom: 4px;
+  bottom: 8px;
 }
