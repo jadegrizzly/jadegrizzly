@@ -30,6 +30,10 @@ Router.route('/photos', function(){
 
 //RP: public_games route
 Router.route('/current', function(){
-
   this.render('public_games');
+});
+
+
+Router.route('/takephoto', function(){
+  this.render('take_photo');
 });

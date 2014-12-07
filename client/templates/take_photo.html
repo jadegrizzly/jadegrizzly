@@ -1,0 +1,12 @@
+<template name="takePhoto">
+<h1>Photo Booth</h1>
+  <button id="shoot">Take a Pic! ;)</button>
+
+  {{#if photo}}
+    <div>
+      <img src={{photo}} />
+    </div>
+  {{/if}}
+  <br>
+  <a href="/menu">Go back</a>
+</template>
