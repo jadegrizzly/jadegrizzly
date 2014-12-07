@@ -1,11 +1,21 @@
 <template name="publicGames">
-    <div class="">
-        {{> inputAutocomplete settings=settings id="gameName" class="searchingGame " name="gameName" placeholder="gameName" }}
-    </div>
-    <a href="/menu">Go back</a>
+
+  <div class="go-back">
+    <div class="inner">&#8592;</div>
+  </div>
+
+  <div class="logout">
+    <div class="inner">X</div>
+  </div>
+
+  <h1 class="title">Search</h1>
+
+  <div class="">
+    {{> inputAutocomplete settings=settings id="gameName" class="searchingGame " name="gameName" placeholder="gameName" }}
+  </div>
+
 </template>
 
 <template name="games">
-    <span style=" color: #000;">{{gameName}}</span> 
-
+  <span class="search-entry">{{gameName}}</span> 
 </template>

@@ -2,7 +2,6 @@ Players = new Meteor.Collection('players');
 Games = new Meteor.Collection('games');
 Feats = new Meteor.Collection('feats');
 
-
 Meteor.subscribe('players');
 Meteor.subscribe('users');
 Meteor.subscribe('games');
@@ -41,23 +40,22 @@ Template.createGame.helpers({
 Template.createGame.events({
   'submit form.new-game': function(evt, template) {
     evt.preventDefault();
-
     var value = template.find('.gameName').value;
-
     Meteor.call('gamesUpsert', Session.get('currentGameId'), {$set: {gameName: value}});
   },
 
   'submit form.new-event': function(evt, template) {
     evt.preventDefault();
-
     var input = template.find('.addEvents');
-
     Meteor.call('gamesUpsert', Session.get('currentGameId'), {$push:{featList: input.value}});
-
     input.value = '';
   },
 
   'click .cancel-game': function(evt, template) {
+    Router.go('/menu');
+  },
+
+  'click .go-back': function(evt, template) {
     Router.go('/menu');
   },
 

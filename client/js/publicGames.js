@@ -1,4 +1,3 @@
-
 Template.publicGames.helpers({
   settings: {
     position: 'top',
@@ -17,3 +16,17 @@ Template.publicGames.helpers({
     return Games.find();
   }
 });
+
+Template.publicGames.events({
+  'click .go-back': function(evt, template) {
+    Router.go('/menu');
+  },
+
+  'click .logout': function(evt, template) {
+    console.log('Logging user out...');
+    Meteor.logout(function(err) {
+      Router.go('/');
+    });
+  }
+});
+

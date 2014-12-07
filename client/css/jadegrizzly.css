@@ -12,7 +12,7 @@ html, body {
 }
 
 .wrapper {
-  margin: 50px auto 0 auto;
+  margin: 65px auto 0 auto;
   text-align: center;
   min-width: 360px;
 }
@@ -27,7 +27,7 @@ html, body {
     margin-bottom: 40px;
   }
   ul {
-    width: 260px;
+    width: 275px;
     margin: 0 auto 0 auto;
   }
 }
@@ -163,18 +163,23 @@ button:focus {
 }
 
 /* LOGOUT */
-.logout {
+.logout,
+.go-back {
   position: fixed;
   top: 0;
-  right: 0;
   border: 1px solid white;
   border-radius: 100%;
-  margin: 15px 15px 0 0;
   height: 32px;
   width: 32px;
 }
 
-.logout:hover {
+.logout {
+  right: 0;
+  margin: 15px 15px 0 0;
+}
+
+.logout:hover,
+.go-back:hover {
   border: 1px solid steelblue;
   color: steelblue;
   cursor: pointer;
@@ -184,4 +189,28 @@ button:focus {
   font-size: 14px;
   position: relative;
   bottom: 8px;
+}
+
+/* BACK ARROW */
+.go-back {
+  left: 0;
+  margin: 15px 0 0 15px;
+}
+
+.go-back .inner {
+  bottom: 10px;
+}
+
+/* AUTOCOMPLETE CONTAINER */
+.-autocomplete-container {
+  background: none;
+  border: none;
+  box-shadow: none;
+  right: 40;
+  text-decoration: none;
+}
+
+.search-entry {
+  color: white;
+  margin-left: 4px;
 }
