@@ -4,13 +4,19 @@
   </h1>
 
   <ul>
-    {{#each events}}
+    <!-- {{#each events}}
       {{> event}}
-    {{/each}}
+    {{/each}} -->
   </ul>
 
   <div class="footer">
     <button class="navigate-photos">Photos</button>
     <button class="navigate-events">Events</button>
   </div>
+</template>
+
+<template name='event'>
+  <li>
+    {{event}}
+  </li>
 </template>
