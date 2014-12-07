@@ -4,11 +4,16 @@
 
   <h1 class="title">Search</h1>
 
-  <div class="">
-    {{> inputAutocomplete settings=settings id="gameName" class="searchingGame " name="gameName" placeholder="gameName" }}
-  </div>
+   <div class="">
+        {{> inputAutocomplete settings=settings id="gameName" class="searchingGame " name="gameName" placeholder="gameName" }}
+    </div>
+    <br>
+    <a href="/takephoto">Take photo</a>
+    <br>
+    <a href="/menu">Go back</a>
 </template>
 
 <template name="games">
   <span style=" color: white;">{{gameName}}</span> 
+
 </template>
