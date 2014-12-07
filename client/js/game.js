@@ -31,14 +31,15 @@ Template.game.events({
 /**
  * List item events.
  */
-Session.setDefault('imageExists', false);
+
+Template.gameEvent.created = function() {
+  this.glyphIcon = new ReactiveVar;
+  this.glyphIcon.set('glyphicon-pushpin');
+};
 
 Template.gameEvent.helpers({
   checker: function() {
-    return Session.get('checked');
-  },
-  imageExists: function() {
-    return Session.get('imageExists');
+    return Template.instance().glyphIcon.get();
   }
 });
 
@@ -50,7 +51,7 @@ Template.gameEvent.events({
     };
 
     var featName = this.name;
-    var span = template.find('.check');
+    var glyphIcon = template.glyphIcon.get();
 
     MeteorCamera.getPicture(cameraOptions, function (error, data) {
       if(error) { console.log(error); }
@@ -58,8 +59,8 @@ Template.gameEvent.events({
       Session.set('eventImage', data);
       var gameId = Session.get('currentGameId');
       var userId = Meteor.userId();      
-      Meteor.call('featListUpdate', {_id: gameId, 'featList.name': featName }, {$push: {"featList.$.competedBy" : {"playerId":userId, "photoURL":data}}});
-      span.setAttribute('class', 'checked glyphicon glyphicon-ok');
+      Meteor.call('featListUpdate', {_id: gameId, 'featList.name': featName }, {$push: {"featList.$.completedBy" : {"playerId":userId, "photoURL":data}}});
+      template.glyphIcon.set('glyphicon-ok');
     });
   }
 });

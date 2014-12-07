@@ -1,3 +1,13 @@
+Template.photos.helpers({
+  photos: function() {
+    console.log(Games.findOne(Session.get('currentGameId'), {'featList': {"photoURL" : 1}}));
+    return Games.findOne(Session.get('currentGameId'));
+  },
+  gameName: function() {
+    return Games.findOne(Session.get('currentGameId'));
+  }
+});
+
 Template.photos.events({
   'click .navigate-events': function(evt, template) {
     Router.go('/game');
