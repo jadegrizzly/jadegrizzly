@@ -71,5 +71,9 @@ Meteor.methods({
 
   gamesUpsert: function(id, doc) {
     Games.upsert(id, doc);
+  },
+
+  featListUpdate: function(id, doc) {
+    Games.update(id, doc);
   }
 });

@@ -10,17 +10,23 @@ Template.game.helpers({
 });
 
 Template.gameEvent.events({
-  'click a.event-name': function () {
+  'click a.event-name': function (evt, template) {
     var cameraOptions = {
       width: 800,
       height: 600
     };
 
+    var featName = this.name;
+
     MeteorCamera.getPicture(cameraOptions, function (error, data) {
       if(error) { console.log(error); }
       // INSERT URL TO DB
       Session.set('eventImage', data);
-      //Meteor.call('gamesUpsert', Session.get('currentGameId'), {$push:{featList: {url: input.value}}});
+      var gameId = Session.get('currentGameId');
+      var userId = Meteor.userId();
+      console.log(gameId + " " + userId + " " + featName);
+      
+      Meteor.call('featListUpdate', {_id: gameId, 'featList.name': featName }, {$push: {"featList.$.competedBy" : {"playerId":userId, "photoURL":data}}});
     });
   }
 });
