@@ -1,11 +1,14 @@
 <template name="photos">
+  <div class="go-back glyphicon glyphicon-chevron-left"></div>
+  <div class="logout glyphicon glyphicon-remove"></div>
+
   <h1 class="title">
-    {{newGame}}
+    {{newGame.gameName}}
   </h1>
 
-  <ul>
+  <ul class="eventPhotos">
     {{#each photos}}
-      {{> photo}}
+      {{> featPhoto}}
     {{/each}}
   </ul>
 
@@ -13,4 +16,8 @@
     <button class="navigate-photos">Photos</button>
     <button class="navigate-events">Events</button>
   </div>
+</template>
+
+<template name="featPhoto">
+  <li class="featPhoto">{{this.image}}</li>
 </template>
