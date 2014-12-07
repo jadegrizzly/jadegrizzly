@@ -8,11 +8,11 @@ html, body {
   display: block;
   font-family: Lato, Helvetica, Arial, sans-serif;
   font-weight: 300;
-  line-height: 2.4em;
+  line-height: 1.6em;
 }
 
 .wrapper {
-  margin: 50px auto 0 auto;
+  margin: 50px auto 60px auto;
   text-align: center;
   min-width: 360px;
 }
@@ -27,7 +27,7 @@ html, body {
     margin-bottom: 40px;
   }
   ul {
-    width: 275px;
+    width: 300px;
     margin: 0 auto 0 auto;
   }
 }
@@ -57,7 +57,7 @@ html, body {
 /* TABLET LANDSCAPE / DESKTOP */
 @media only screen and (min-width: 1024px) {
   body {
-    font-size: 30px;
+    font-size: 24px;
   }
   .title {
     font-size: 80px;
@@ -81,6 +81,8 @@ input {
   border-bottom: 1px solid white;
   color: steelblue;
   margin-left: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
   text-decoration: none;
   -webkit-appearance: none;
 }
@@ -106,9 +108,8 @@ a {
 }
 
 a:hover {
-  color: steelblue;
+  color: white;
   text-decoration: none;
-  border-bottom: 1px solid white;
 }
 
 #login-buttons-password,
@@ -122,18 +123,23 @@ ul, li {
   text-align: left;
 }
 
+li,
+a {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
 .remove {
   cursor: pointer;
   display: inline-block;
-  float: right;
-  font-size: 14px;
+  font-size: 15px;
+  margin-left: 5px;
+  margin-top: 10px;
 }
 
 .remove:hover {
   color: steelblue;
 }
-
-.remove {}
 
 /* FOOTER */
 .footer {
@@ -141,6 +147,7 @@ ul, li {
   bottom: 0;
   position: fixed;
   width: 100%;
+  background-color: #2ae8db;
 }
 
 button {
@@ -149,7 +156,6 @@ button {
   color: white;
   height: 60px;
   width: 48%;
-  margin-top: 10px;
   margin-bottom: 5px;
 }
 
@@ -178,10 +184,10 @@ button:focus {
 
 /* BACK BUTTON */
 .go-back {
-  position: fixed;
-  top: 0;
   left: 0;
   margin: 20px 0 0 20px;
+  position: fixed;
+  top: 0;
 }
 
 /* AUTOCOMPLETE CONTAINER */
@@ -195,4 +201,25 @@ button:focus {
 
 .search-entry {
   color: white;
+}
+
+/* CAMERA */
+.camera-popup {
+  background: none;
+  box-shadow: none;
+  font-family: Lato;
+  font-weight: 400;
+  opacity: .75;
+}
+
+.cancel {
+  background: none !important;
+  border: 2px solid white !important;
+  border-radius: 0px !important;
+  height: 100%;
+}
+
+.cancel:hover {
+  border: 2px solid orange !important;
+  color: orange;
 }
