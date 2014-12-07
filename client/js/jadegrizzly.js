@@ -62,6 +62,7 @@ Template.createGame.events({
   },
 
   'click .cancel-game': function(evt, template) {
+    // TODO delete game from database
     Router.go('/menu');
   },
 
