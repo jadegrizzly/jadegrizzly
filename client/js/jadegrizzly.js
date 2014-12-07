@@ -55,6 +55,10 @@ Template.createGame.events({
     Router.go('/menu');
   },
 
+  'click .create-game': function(evt, template) {
+    Router.go('/game');
+  },
+
   'click .go-back': function(evt, template) {
     Router.go('/menu');
   },
