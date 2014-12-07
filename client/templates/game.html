@@ -1,6 +1,6 @@
 <template name="game">
   <h1 class="title">
-    {{newGame}}
+    {{newGame.gameName}}
   </h1>
 
   <ul>
@@ -13,4 +13,10 @@
     <button class="navigate-photos">Photos</button>
     <button class="navigate-events">Events</button>
   </div>
+</template>
+
+<template name='event'>
+  <a style="display: block">
+    {{name}}
+  </a>
 </template>
