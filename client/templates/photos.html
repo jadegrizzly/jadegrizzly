@@ -3,11 +3,11 @@
   <div class="logout glyphicon glyphicon-remove"></div>
 
   <h1 class="title">
-    {{newGame.gameName}}
+    {{gameName.gameName}}
   </h1>
 
   <ul class="eventPhotos">
-    {{#each photos}}
+    {{#each photos.featList}}
       {{> featPhoto}}
     {{/each}}
   </ul>
@@ -19,5 +19,18 @@
 </template>
 
 <template name="featPhoto">
-  <li class="featPhoto">{{this.image}}</li>
+  <h3>{{this.name}}</h3>
+  <li class="featPhoto">
+    {{#each this.completedBy}}
+      {{> snapshots}}
+    {{/each}}
+    </li>
+</template>
+
+<template name="snapshots">
+  <div>
+    <a href="#">
+      <img src="{{photoURL}}" alt="image">      
+    </a>
+  </div>
 </template>
