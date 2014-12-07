@@ -1,12 +1,14 @@
 <template name="publicGames">
-    <div class="glyphicon glyphicon-chevron-left"></div>
-    <div class="">
-        {{> inputAutocomplete settings=settings id="gameName" class="searchingGame " name="gameName" placeholder="gameName" }}
-    </div>
-    <a href="/menu">Go back</a>
+  <div class="go-back glyphicon glyphicon-chevron-left"></div>
+  <div class="logout glyphicon glyphicon-remove"></div>
+
+  <h1 class="title">Search</h1>
+
+  <div class="">
+    {{> inputAutocomplete settings=settings id="gameName" class="searchingGame " name="gameName" placeholder="gameName" }}
+  </div>
 </template>
 
 <template name="games">
-    <span style=" color: #000;">{{gameName}}</span> 
-
+  <span style=" color: white;">{{gameName}}</span> 
 </template>
