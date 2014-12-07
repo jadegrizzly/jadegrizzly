@@ -167,15 +167,10 @@ button:focus {
   position: fixed;
   top: 0;
   right: 0;
-  border: 1px solid white;
-  border-radius: 100%;
-  margin: 15px 15px 0 0;
-  height: 32px;
-  width: 32px;
+  margin: 20px 20px 0 0;
 }
 
 .logout:hover {
-  border: 1px solid steelblue;
   color: steelblue;
   cursor: pointer;
 }
