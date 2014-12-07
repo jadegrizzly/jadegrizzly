@@ -1,12 +1,12 @@
 <template name="game">
   <h1 class="title">
-    {{newGame}}
+    {{newGame.gameName}}
   </h1>
 
   <ul>
-    <!-- {{#each events}}
+    {{#each events}}
       {{> event}}
-    {{/each}} -->
+    {{/each}}
   </ul>
 
   <div class="footer">
@@ -16,7 +16,7 @@
 </template>
 
 <template name='event'>
-  <li>
-    {{event}}
-  </li>
+  <a style="display: block">
+    {{name}}
+  </a>
 </template>
