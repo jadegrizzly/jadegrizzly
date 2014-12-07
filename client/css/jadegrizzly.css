@@ -27,7 +27,7 @@ html, body {
     margin-bottom: 40px;
   }
   ul {
-    width: 260px;
+    width: 275px;
     margin: 0 auto 0 auto;
   }
 }
@@ -182,4 +182,18 @@ button:focus {
   top: 0;
   left: 0;
   margin: 20px 0 0 20px;
+}
+
+/* AUTOCOMPLETE CONTAINER */
+.-autocomplete-container {
+  background: none;
+  border: none;
+  box-shadow: none;
+  right: 40;
+  text-decoration: none;
+}
+
+.search-entry {
+  color: white;
+  margin-left: 4px;
 }
