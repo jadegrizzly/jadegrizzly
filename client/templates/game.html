@@ -5,7 +5,7 @@
 
   <ul>
     {{#each events}}
-      {{> event}}
+      {{> gameEvent}}
     {{/each}}
   </ul>
 
@@ -15,8 +15,8 @@
   </div>
 </template>
 
-<template name='event'>
-  <a style="display: block">
+<template name='gameEvent'>
+  <a style="display: block" class="event-name">
     {{name}}
   </a>
 </template>
