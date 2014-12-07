@@ -24,9 +24,6 @@ Template.userList.helpers({
   }
 });
 
-// Meteor.call('playersUpsert', Meteor.userId(), 
-//             {$push:{ 'imageList': {image_url: '', game_name: '', event_name: ''}}});
-
 /**
  * Game Helpers
  */
@@ -52,7 +49,7 @@ Template.createGame.events({
 
     var input = template.find('.addEvents');
 
-    Meteor.call('gamesUpsert', Session.get('currentGameId'), {$push:{featList: input.value}});
+    Meteor.call('gamesUpsert', Session.get('currentGameId'), {$push:{featList: {name: input.value}}});
 
     input.value = '';
   },
@@ -68,4 +65,30 @@ Template.createGame.events({
     });
   }
 });
+
+Template.userEvent.events({
+  'click .remove': function(evt, template) {
+    Games.update(Session.get('currentGameId'), {$pull: {featList: {name: this.name}}});
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

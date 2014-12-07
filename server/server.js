@@ -67,10 +67,8 @@ Meteor.publish('feats', function() {
 Meteor.methods({
   playersUpsert: function(id, doc) {
     Players.upsert(id, doc);
-  }
-});
+  },
 
-Meteor.methods({
   gamesUpsert: function(id, doc) {
     Games.upsert(id, doc);
   }
