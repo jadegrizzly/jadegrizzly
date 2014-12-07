@@ -22,5 +22,16 @@ Template.gameEvent.events({
       Session.set('eventImage', data);
       //Meteor.call('gamesUpsert', Session.get('currentGameId'), {$push:{featList: {url: input.value}}});
     });
+  },
+
+  'click .go-back': function(evt, template){
+    Router.go('/menu');
+  },
+
+  'click .logout': function(evt, template){
+    console.log('Logging user out...');
+    Meteor.logout(function(err) {
+      Router.go('/');
+    });
   }
 });
