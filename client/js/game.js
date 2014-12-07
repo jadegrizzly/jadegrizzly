@@ -42,4 +42,4 @@ Template.game.events({
       Router.go('/');
     });
   }
-})
+});
