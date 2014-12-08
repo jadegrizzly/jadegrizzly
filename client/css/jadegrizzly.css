@@ -12,9 +12,14 @@ html, body {
 }
 
 .wrapper {
-  margin: 50px auto 60px auto;
+  margin: 60px auto 60px auto;
   text-align: center;
   min-width: 360px;
+  max-width: 960px;
+}
+
+.login-screen {
+  line-height: 2.2em;
 }
 
 /* MEDIA QUERIES */
@@ -152,6 +157,7 @@ a {
   position: fixed;
   width: 100%;
   background-color: #2ae8db;
+  padding-top: 5px;
 }
 
 button {
@@ -216,16 +222,21 @@ button:focus {
   opacity: .75;
 }
 
-.cancel {
+.cancel, .button {
   background: none !important;
   border: 2px solid white !important;
   border-radius: 0px !important;
   height: 100%;
+  width: 100%;
 }
 
-.cancel:hover {
+.cancel:hover, .button:hover {
   border: 2px solid orange !important;
   color: orange;
+}
+
+.photo-preview {
+  margin-bottom: 10px;
 }
 
 /* PHOTOS */
@@ -235,6 +246,7 @@ button:focus {
 
 .full-width {
   width: 100%;
+  max-width: 960px;
 }
 
 .eventPhotos {
@@ -257,4 +269,17 @@ button:focus {
 
 .vote-count {
   font-size: 16px;
+}
+
+/* DROPDOWN MENU */
+#dropdown-menu {
+  left: 0;
+  margin: 15px 0 0 15px;
+  position: fixed;
+  top: 0;
+}
+
+#dropdown-menu:hover {
+  color: steelblue;
+  cursor: pointer;
 }

@@ -22,18 +22,14 @@ Router.route('/game', function(){
   this.render('game');
 });
 
-
 Router.route('/photos', function(){
   this.render('photos');
 });
 
-
-//RP: public_games route
-Router.route('/current', function(){
-  this.render('public_games');
+Router.route('/search', function(){
+  this.render('search');
 });
 
-
-Router.route('/takephoto', function(){
-  this.render('take_photo');
+Router.route('/profile', function(){
+  this.render('profile');
 });

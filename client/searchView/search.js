@@ -1,4 +1,4 @@
-Template.publicGames.helpers({
+Template.search.helpers({
   settings: {
     position: 'top',
     limit: 10,
@@ -19,7 +19,7 @@ Template.games.ownerLabelClass = function() {
   return player.emails[0].address;
 };
 
-Template.publicGames.events({
+Template.search.events({
   'click .go-back': function(evt, template){
     Router.go('/menu');
   },
