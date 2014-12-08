@@ -15,6 +15,7 @@ html, body {
   margin: 50px auto 60px auto;
   text-align: center;
   min-width: 360px;
+  max-width: 960px;
 }
 
 /* MEDIA QUERIES */
@@ -216,14 +217,15 @@ button:focus {
   opacity: .75;
 }
 
-.cancel {
+.cancel, .button {
   background: none !important;
   border: 2px solid white !important;
   border-radius: 0px !important;
   height: 100%;
+  width: 100%;
 }
 
-.cancel:hover {
+.cancel:hover, .button:hover {
   border: 2px solid orange !important;
   color: orange;
 }
