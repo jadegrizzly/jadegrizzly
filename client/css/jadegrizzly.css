@@ -4,7 +4,7 @@
 *,
 *:before,
 *:after {
-  border-box: padding-box;
+  box-sizing: border-box;
 }
 
 /* MEDIA QUERIES */
@@ -13,12 +13,12 @@
     font-size: 20px;
   }
   .title {
-    font-size: 50px;
+    font-size: 45px;
     margin-bottom: 40px;
   }
   ul {
-    width: 300px;
-    margin: 0 auto 0 auto;
+    width: 280px;
+    margin: 0 auto;
   }
 }
 
@@ -28,8 +28,12 @@
     font-size: 20px;
   }
   .title {
-    font-size: 50px;
+    font-size: 45px;
     margin-bottom: 40px;
+  }
+  ul {
+    width: 280px;
+    margin: 0 auto;
   }
 }
 
@@ -39,8 +43,12 @@
     font-size: 24px;
   }
   .title {
-    font-size: 60px;
+    font-size: 55px;
     margin-bottom: 40px;
+  }
+  ul {
+    width: 340px;
+    margin: 0 auto;
   }
 }
 
@@ -50,7 +58,7 @@
     font-size: 24px;
   }
   .title {
-    font-size: 80px;
+    font-size: 70px;
     margin-bottom: 40px;
   }
   ul {
@@ -70,9 +78,9 @@ html, body {
 }
 
 .wrapper {
-  margin: 60px auto 60px auto;
+  margin: 75px auto 60px auto;
   text-align: center;
-  min-width: 360px;
+  min-width: 300px;
   max-width: 960px;
 }
 
@@ -86,6 +94,7 @@ html, body {
   margin: 15px 0 0 15px;
   position: fixed;
   top: 0;
+  z-index: 10;
 }
 
 #dropdown-menu:hover {
@@ -211,40 +220,45 @@ button:focus {
 }
 
 /* SEARCH AUTOCOMPLETE */
-.-autocomplete-list li {
-  border: none !important;
-  background-color: none !important;
-  background: none !important;
-  font-size: 10px !important;
-}
-
-.-autocomplete-list li:hover {
-  border: none !important;
-  border-left: 5px solid red !important;
-  background-color: none !important;
-  background: none !important;
-}
-
 .-autocomplete-container {
   background: none;
-  border: none !important;
+  border: none;
   box-shadow: none;
-  right: 40;
-  text-decoration: none;
-}
-
-.search-entry {
-  background: none !important;
-  border-bottom: none !important;
-  color: white;
 }
 
 .-autocomplete-container:hover {
-  cursor: pointer !important;
-  background-color: none !important;
+  cursor: pointer;
+}
+
+.-autocomplete-list {
+  font-size: 5px;
+  margin-top: 30px;
+  max-height: 400px;
+  overflow: auto;
+}
+
+.-autocomplete-list li {
+  border: none;
   background: none !important;
-  text-decoration: none !important;
-  font-style: none !important;
+}
+
+.-autocomplete-list li:hover {
+  background: steelblue !important;
+}
+
+.-autocomplete-item {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.-autocomplete-item h3 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.4em;
+}
+
+em {
+  opacity: 0.85;
 }
 
 /* CAMERA */
@@ -265,8 +279,8 @@ button:focus {
 }
 
 .cancel:hover, .button:hover {
-  border: 2px solid orange !important;
-  color: orange;
+  border: 2px solid steelblue !important;
+  color: steelblue;
 }
 
 .photo-preview {
@@ -304,4 +318,19 @@ button:focus {
 
 .vote-count {
   font-size: 16px;
+}
+
+/* USER */
+.user {
+  position: relative;
+  border: 5px solid white;
+  border-radius: 100%;
+  height: 120px;
+  width: 120px;
+  margin: 0 auto 25px auto;
+}
+
+.user-icon {
+  font-size: 75px;
+  margin-top: 12px;
 }
