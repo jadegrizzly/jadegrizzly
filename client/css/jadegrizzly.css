@@ -141,6 +141,10 @@ a {
   color: steelblue;
 }
 
+.check {
+  margin-left: 10px;
+}
+
 /* FOOTER */
 .footer {
   left: 0;
@@ -222,4 +226,35 @@ button:focus {
 .cancel:hover {
   border: 2px solid orange !important;
   color: orange;
+}
+
+/* PHOTOS */
+.block {
+  margin-bottom: 40px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.eventPhotos {
+  margin-bottom: 100px;
+}
+
+.upvote {
+  margin-right: 5px;
+}
+
+.upvote:hover,
+.downvote:hover {
+  cursor: pointer;
+  color: steelblue;
+}
+
+.vote-block {
+  margin-top: 10px;
+}
+
+.vote-count {
+  font-size: 16px;
 }
