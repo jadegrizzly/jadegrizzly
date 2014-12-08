@@ -28,7 +28,8 @@ Template.snapshots.events({
   'click div.upvote': function(evt, template) {
     var gameId = Session.get('currentGameId');
     var featName = this.featName;
-
+    console.log(this.featName);
+    console.log(this.userId);
     Meteor.call('featListUpdate', {_id: gameId, 'featList.name': featName, 'featList.completedBy.featName': featName}, {$inc: {"featList.$.completedBy.0.voteCount": 1}});
   },
 

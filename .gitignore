@@ -4,6 +4,9 @@
 logs
 *.log
 
+#ignore meger backups
+*.orig
+
 # Runtime data
 pids
 *.pid
