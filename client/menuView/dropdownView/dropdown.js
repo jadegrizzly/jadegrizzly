@@ -16,5 +16,12 @@ Template.dropdown.events({
       // update player's game list with game they created
       Meteor.call('playersUpsert', Meteor.userId(), {$push:{'gameList':id}});
     });
+  },
+
+  'click .logging-out': function(evt, template) {
+    console.log('Logging user out...');
+    Meteor.logout(function(err) {
+      Router.go('/');
+    });
   }
 });
