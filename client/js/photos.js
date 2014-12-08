@@ -1,6 +1,5 @@
 Template.photos.helpers({
   photos: function() {
-    console.log(Games.findOne(Session.get('currentGameId')));
     return Games.findOne(Session.get('currentGameId'));
   },
   gameName: function() {
@@ -22,5 +21,21 @@ Template.photos.events({
     Meteor.logout(function(err) {
       Router.go('/');
     });
+  }
+});
+
+Template.snapshots.events({
+  'click div.upvote': function(evt, template) {
+    var gameId = Session.get('currentGameId');
+    var featName = this.featName;
+
+    Meteor.call('featListUpdate', {_id: gameId, 'featList.name': featName, 'featList.completedBy.featName': featName}, {$inc: {"featList.$.completedBy.0.voteCount": 1}});
+  },
+
+  'click div.downvote': function(evt, template) {
+    var gameId = Session.get('currentGameId');
+    var featName = this.featName;
+
+    Meteor.call('featListUpdate', {_id: gameId, 'featList.name': featName, 'featList.completedBy.featName': featName}, {$inc: {"featList.$.completedBy.0.voteCount": -1}});
   }
 });
