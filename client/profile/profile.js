@@ -11,7 +11,6 @@ Template.profile.helpers({
   }
 });
 
-
 /**
  * Helpers for Each Game
  */
