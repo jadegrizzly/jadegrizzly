@@ -56,20 +56,7 @@ Template.gameEvent.events({
 
 
 
-      // TODO Check if the user already has a photo for this featName, gameId and playerId
 
-      Images.insert({
-                      userId: userId,
-                      username: Meteor.user().username,
-                      gameId: gameId,
-                      featName: featName,
-                      "photoURL":data,
-                      voteCount: 0,
-                      downVotes: [],
-                      upVotes: []
-                    });
-
-      template.glyphIcon.set('glyphicon-ok');
 
 
     });
