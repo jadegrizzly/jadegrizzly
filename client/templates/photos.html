@@ -6,11 +6,11 @@
     {{gameName.gameName}}
   </h1>
 
-  <ul class="eventPhotos">
+  <div class="eventPhotos">
     {{#each photos.featList}}
       {{> featPhoto}}
     {{/each}}
-  </ul>
+  </div>
 
   <div class="footer">
     <button class="navigate-photos">Photos</button>
@@ -19,18 +19,25 @@
 </template>
 
 <template name="featPhoto">
-  <h3>{{this.name}}</h3>
-  <li class="featPhoto">
+  <h3 class="feat-name">{{this.name}}</h3>
+  <p class="vote-count">Votes: {{this.voteCount}}</p>
+  <div class="featPhoto">
     {{#each this.completedBy}}
       {{> snapshots}}
     {{/each}}
-    </li>
+  </div>
 </template>
 
 <template name="snapshots">
-  <div>
-    <a href="#">
-      <img src="{{photoURL}}" alt="image">      
-    </a>
+  <div class="block">
+    <div class="image-block">
+      <a href="#">
+        <img class="full-width" src="{{photoURL}}" alt="image">      
+      </a>
+    </div>
+    <div class="vote-block">
+      <div class="upvote glyphicon glyphicon-plus"></div>
+      <div class="downvote glyphicon glyphicon-minus"></div>
+    </div>
   </div>
 </template>
