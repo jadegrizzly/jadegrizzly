@@ -55,10 +55,6 @@ Template.gameEvent.events({
 
 
 
-
-
-
-
       // TODO Check if the user already has a photo for this featName, gameId and playerId
 
       Images.insert({
@@ -73,6 +69,7 @@ Template.gameEvent.events({
                     });
 
       template.glyphIcon.set('glyphicon-ok');
+
 
 
     });
