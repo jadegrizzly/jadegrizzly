@@ -20,7 +20,6 @@
 
 <template name="featPhoto">
   <h3 class="feat-name">{{this.name}}</h3>
-  <p class="vote-count">Votes: {{this.voteCount}}</p>
   <div class="featPhoto">
     {{#each this.completedBy}}
       {{> snapshots}}
@@ -30,10 +29,9 @@
 
 <template name="snapshots">
   <div class="block">
+    <p class="vote-count">Votes: {{voteCount}}</p>
     <div class="image-block">
-      <a href="#">
-        <img class="full-width" src="{{photoURL}}" alt="image">      
-      </a>
+      <img class="full-width" src="{{photoURL}}" alt="image">
     </div>
     <div class="vote-block">
       <div class="upvote glyphicon glyphicon-plus"></div>
