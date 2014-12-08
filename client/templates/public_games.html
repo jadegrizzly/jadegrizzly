@@ -5,10 +5,19 @@
   <h1 class="title">Open Games</h1>
 
   <form class="gameSearch" autocomplete="off">
-    {{> inputAutocomplete settings=settings id="gameName" class="searchingGame " name="gameName" placeholder="Games" }}
+    {{> inputAutocomplete 
+    	settings=settings 
+    	id="gameName" 
+    	class="searchingGame " 
+    	name="gameName" 
+    	placeholder="Games" }}
   </form>
 </template>
 
 <template name="games">
-  <span style=" color: white;">{{gameName}}</span>
+  <h3 style=" color: white;">
+  	Game: {{gameName}} 
+  </h3>
+  <h3 class="ownerLabel" style=" color: white;">Owner: {{ownerLabelClass}} 
+  </h3>
 </template>
