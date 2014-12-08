@@ -1,6 +1,6 @@
 Template.photos.helpers({
   photos: function() {
-    console.log(Games.findOne(Session.get('currentGameId'), {'featList': {"photoURL" : 1}}));
+    console.log(Games.findOne(Session.get('currentGameId')));
     return Games.findOne(Session.get('currentGameId'));
   },
   gameName: function() {

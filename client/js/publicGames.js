@@ -1,4 +1,3 @@
-
 Template.publicGames.helpers({
   settings: {
     position: 'top',
@@ -21,5 +20,14 @@ Template.publicGames.helpers({
 Template.publicGames.events({
   'click .go-back': function(evt, template){
     Router.go('/menu');
+  },
+
+  'submit form.gameSearch': function(evt, template) {
+    evt.preventDefault();
+    var gameName = template.find('.searchingGame').value;
+    var gameId = Games.findOne({gameName: gameName});
+
+    Session.set('currentGameId', gameId._id);
+    Router.go('/game');
   }
 });
