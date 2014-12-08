@@ -18,6 +18,10 @@ html, body {
   max-width: 960px;
 }
 
+.login-screen {
+  line-height: 2.2em;
+}
+
 /* MEDIA QUERIES */
 @media only screen and (min-width: 300px) {
   body {
