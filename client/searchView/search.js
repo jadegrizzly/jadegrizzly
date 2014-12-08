@@ -18,10 +18,6 @@ Template.search.helpers({
 });
 
 Template.search.events({
-  'click .go-back': function(evt, template){
-    Router.go('/menu');
-  },
-
   'submit form.gameSearch': function(evt, template) {
     evt.preventDefault();
     var gameName = template.find('.searchingGame').value;

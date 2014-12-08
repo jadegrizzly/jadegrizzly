@@ -25,24 +25,3 @@ Template.registerHelper('log', function(something) {
 Accounts.ui.config({
   passwordSignupFields: 'USERNAME_ONLY'
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

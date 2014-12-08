@@ -10,16 +10,6 @@ Template.game.helpers({
 });
 
 Template.game.events({
-  'click .go-back': function(evt, template){
-    Router.go('/create');
-  },
-
-  'click .logout': function(evt, template){
-    console.log('Logging user out...');
-    Meteor.logout(function(err) {
-      Router.go('/');
-    });
-  },
   'click .navigate-photos': function(evt, template){
     Router.go('/photos');
   },
