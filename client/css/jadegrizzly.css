@@ -5,6 +5,10 @@
 *:before,
 *:after {
   box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 /* MEDIA QUERIES */
@@ -19,6 +23,15 @@
   ul {
     width: 280px;
     margin: 0 auto;
+  }
+  .logo {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  #login-username-label,
+  #login-password-label {
+    font-size: 16px;
   }
 }
 
@@ -35,6 +48,11 @@
     width: 280px;
     margin: 0 auto;
   }
+  .logo {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
 }
 
 /* TABLETS PORTRAIT */
@@ -50,6 +68,15 @@
     width: 340px;
     margin: 0 auto;
   }
+  .logo {
+    max-width: 560px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  #login-username-label,
+  #login-password-label {
+    font-size: 20px;
+  }
 }
 
 /* TABLET LANDSCAPE / DESKTOP */
@@ -64,6 +91,15 @@
   ul {
     width: 340px;
     margin: 0 auto 0 auto;
+  }
+  .logo {
+    max-width: 560px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  #login-username-label,
+  #login-password-label {
+    font-size: 20px;
   }
 }
 
@@ -84,8 +120,21 @@ html, body {
   max-width: 960px;
 }
 
+.big {
+  margin-bottom: 30px;
+}
+
+/* LOGIN */
 .login-screen {
   line-height: 2.2em;
+}
+
+#login-username-label-and-input {
+  margin-top: 20px;
+}
+
+#login-password-label-and-input {
+  margin-bottom: 20px;
 }
 
 /* DROPDOWN MENU */
@@ -112,9 +161,9 @@ input {
   border: none;
   border-bottom: 1px solid white;
   color: steelblue;
-  margin-left: 15px;
+  margin-left: 10px;
   margin-bottom: 15px;
-  padding-bottom: 8px;
+  padding-bottom: 5px;
   text-decoration: none;
   -webkit-appearance: none;
 }
@@ -190,6 +239,7 @@ button {
   background: none;
   border: 2px solid white;
   color: white;
+  font-weight: 400;
   height: 60px;
   width: 48%;
   margin-bottom: 5px;
@@ -224,11 +274,6 @@ button:focus {
 
 .-autocomplete-list li {
   border: none;
-  background: none !important;
-}
-
-.-autocomplete-list li:hover {
-  background: steelblue !important;
 }
 
 .-autocomplete-item {
