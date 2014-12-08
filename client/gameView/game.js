@@ -59,7 +59,7 @@ Template.gameEvent.events({
       Session.set('eventImage', data);
       var gameId = Session.get('currentGameId');
       var userId = Meteor.userId();
-      console.log(gameId + " " + userId);
+      
       Meteor.call('featListUpdate', {_id: gameId, 'featList.name': featName }, {$push: {"featList.$.completedBy" : {"playerId":userId, "photoURL":data, "voteCount": 0, "featName": featName}}});
       template.glyphIcon.set('glyphicon-ok');
     });

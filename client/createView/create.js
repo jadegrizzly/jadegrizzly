@@ -1,15 +1,15 @@
 /**
- * Game Helpers
+ * Create Game Helpers
  */
 
-Template.createGame.helpers({
+Template.create.helpers({
   feats: function() {
     var gameId = Session.get('currentGameId');
     return Games.findOne({_id: gameId});
   }
 });
 
-Template.createGame.events({
+Template.create.events({
   'submit form.new-game': function(evt, template) {
     evt.preventDefault();
 

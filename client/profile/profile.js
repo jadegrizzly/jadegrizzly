@@ -22,5 +22,11 @@ Template.profileGames.helpers({
 });
 
 Template.profileGames.events({
+  'click a.profile-game-name': function(evt, template) {
+    evt.preventDefault();
+    var gameId = (Games.findOne({gameName: this.gameName}));
 
+    Session.set('currentGameId', gameId._id);
+    Router.go('/game');
+  }
 });
