@@ -12,7 +12,7 @@ html, body {
 }
 
 .wrapper {
-  margin: 50px auto 60px auto;
+  margin: 60px auto 60px auto;
   text-align: center;
   min-width: 360px;
   max-width: 960px;
@@ -153,6 +153,7 @@ a {
   position: fixed;
   width: 100%;
   background-color: #2ae8db;
+  padding-top: 5px;
 }
 
 button {
@@ -228,6 +229,10 @@ button:focus {
 .cancel:hover, .button:hover {
   border: 2px solid orange !important;
   color: orange;
+}
+
+.photo-preview {
+  margin-bottom: 10px;
 }
 
 /* PHOTOS */
