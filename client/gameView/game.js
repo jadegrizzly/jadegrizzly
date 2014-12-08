@@ -77,3 +77,4 @@ Template.gameEvent.events({
   }
 });
 
+
