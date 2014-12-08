@@ -270,3 +270,16 @@ button:focus {
 .vote-count {
   font-size: 16px;
 }
+
+/* DROPDOWN MENU */
+#dropdown-menu {
+  left: 0;
+  margin: 15px 0 0 15px;
+  position: fixed;
+  top: 0;
+}
+
+#dropdown-menu:hover {
+  color: steelblue;
+  cursor: pointer;
+}

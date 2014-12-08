@@ -18,7 +18,9 @@ Template.registerHelper('log', function(something) {
   console.log(something);
 });
 
-
+Accounts.ui.config({
+  passwordSignupFields: 'USERNAME_ONLY'
+});
 
 
 
