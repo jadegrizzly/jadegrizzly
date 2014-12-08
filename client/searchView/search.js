@@ -1,10 +1,13 @@
+/**
+ * Search List Helpers 
+ */
+
 Template.search.helpers({
   settings: {
     position: 'top',
     limit: 10,
     rules: [
       {
-        // token: '',
         collection: Games,
         field: 'gameName',
         matchAll: true,
@@ -13,11 +16,6 @@ Template.search.helpers({
     ]
   }
 });
-
-Template.games.ownerLabelClass = function() {
-  var player = Meteor.users.findOne(this.createdBy);
-  return player.emails[0].address;
-};
 
 Template.search.events({
   'click .go-back': function(evt, template){
@@ -31,5 +29,16 @@ Template.search.events({
 
     Session.set('currentGameId', gameId._id);
     Router.go('/game');
+  }
+});
+
+/**
+ * Search Game Helpers
+ */
+
+Template.games.helpers({
+  ownerLabelClass: function() {
+    var player = Meteor.users.findOne(this.createdBy);
+    return player.username;
   }
 });

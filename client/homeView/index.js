@@ -18,9 +18,14 @@ Template.registerHelper('log', function(something) {
   console.log(something);
 });
 
+/**
+ *  Accounts UI Config (Use USERNAME Strategy)
+ */
+
 Accounts.ui.config({
   passwordSignupFields: 'USERNAME_ONLY'
 });
+
 
 
 

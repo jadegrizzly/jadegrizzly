@@ -1,5 +1,5 @@
 Template.menu.events({
-  'click .createdGame': function(evt, template) {
+  'click .createGame': function(evt, template) {
     var gameObj = {
       createdBy: Meteor.userId(),
       participants: [Meteor.userId()]
