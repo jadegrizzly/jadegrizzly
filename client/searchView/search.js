@@ -11,17 +11,13 @@ Template.publicGames.helpers({
         template: Template.games
       }
     ]
-  }/*,
-  gameNames: function() {
-    debugger;
-    return Games.find();
-  }*/
+  }
 });
 
 Template.games.ownerLabelClass = function() {
   var player = Meteor.users.findOne(this.createdBy);
   return player.emails[0].address;
-}
+};
 
 Template.publicGames.events({
   'click .go-back': function(evt, template){

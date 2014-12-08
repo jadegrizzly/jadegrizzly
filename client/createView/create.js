@@ -1,29 +1,3 @@
-Players = new Meteor.Collection('players');
-Games = new Meteor.Collection('games');
-Feats = new Meteor.Collection('feats');
-
-
-Meteor.subscribe('players');
-Meteor.subscribe('users');
-Meteor.subscribe('games');
-Meteor.subscribe('feats');
-
-Template.registerHelper('log', function(something) {
-  console.log(something);
-});
-
-Template.userList.helpers({
-  allUsers: function() {
-    return Meteor.users.find().fetch();
-  }
-});
-
-Template.userList.helpers({
-  user: function() {
-    return Meteor.users.find();
-  }
-});
-
 /**
  * Game Helpers
  */
@@ -99,24 +73,3 @@ Template.userEvent.events({
     Games.update(Session.get('currentGameId'), {$pull: {featList: {name: this.name}}});
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

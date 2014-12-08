@@ -55,10 +55,6 @@ Meteor.publish('games', function() {
   return Games.find();
 });
 
-Meteor.publish('feats', function() {
-  return Games.find({}, {fields: {featList: 1}});
-});
-
 
 /**
  * Server Methods
