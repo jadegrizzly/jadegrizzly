@@ -72,7 +72,6 @@ Template.gameEvent.events({
       template.glyphIcon.set('glyphicon-ok');
 
 
-
     });
   }
 });
