@@ -1,5 +1,6 @@
 Router.configure({
-  layoutTemplate: 'layout'
+  layoutTemplate: 'layout',
+  template: 'index'
 });
 
 Router.route('/', function() {
@@ -32,4 +33,8 @@ Router.route('/search', function(){
 
 Router.route('/profile', function(){
   this.render('profile');
+});
+
+Router.route(/\S+/i, function() {
+  Router.go('/');
 });

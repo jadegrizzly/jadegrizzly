@@ -30,7 +30,8 @@
     margin-bottom: 15px;
   }
   #login-username-label,
-  #login-password-label {
+  #login-password-label,
+  #login-password-again-label {
     font-size: 16px;
   }
 }
