@@ -6,7 +6,7 @@ Router.route('/', function() {
   if (Meteor.user()) {
     Router.go('/menu');
   } else {
-    this.render('home');
+    this.render('index');
   }
 });
 
