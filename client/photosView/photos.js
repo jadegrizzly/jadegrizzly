@@ -1,6 +1,7 @@
 Template.photos.helpers({
   photos: function() {
-    return Games.findOne(Session.get('currentGameId'));
+    var cursor =  Images.find({gameId: Session.get('currentGameId')});//gameId: Session.get('currentGameId')
+    return cursor;
   },
   gameName: function() {
     return Games.findOne(Session.get('currentGameId'));
@@ -24,43 +25,17 @@ Template.photos.events({
   }
 });
 
-var hasUpVoted = function(gameId, featName, userId, playerId)
+var hasUpVoted = function(voterId, photoId)
 {
-  var query = {
-            '_id':gameId, 
-            'featList.completedBy': {
-              $elemMatch: {
-                featName:featName, 
-                'playerId':playerId, 
-                'upVotes': {
-                  $in: [
-                    Meteor.userId()
-                  ]
-                }
-              }
-            }
-          };
-  var voteCheck = Games.findOne(query);
+  var query = {'_id':photoId, 'upVotes': { $in: [ voterId ] } };
+  var voteCheck = Images.findOne(query);
   return !(voteCheck === undefined);
 }
 
-var hasDownVoted = function(gameId, featName, userId, playerId)
+var hasDownVoted = function(voterId, photoId)
 {
-    var query = {
-                '_id':gameId, 
-                'featList.completedBy': {
-                  $elemMatch: {
-                    featName:featName, 
-                    'playerId':playerId, 
-                    'downVotes': {
-                      $in: [
-                        Meteor.userId()
-                      ]
-                    }
-                  }
-                }
-              };
-  var voteCheck = Games.findOne(query);
+  var query = {'_id':photoId, 'downVotes': { $in: [ voterId ] } };
+  var voteCheck = Images.findOne(query);
   return !(voteCheck === undefined);            
 }
 
@@ -70,22 +45,18 @@ var hasDownVoted = function(gameId, featName, userId, playerId)
 
 Template.snapshots.events({
   'click div.upvote': function(evt, template) {
-    var gameId = Session.get('currentGameId');
-    var featName = this.featName;
     var userId = Meteor.userId();
-    var playerId = this.playerId;
     
-    var upVoteCheck = hasUpVoted(gameId, featName, userId, playerId);
-    var downVoteCheck = hasDownVoted(gameId, featName, userId, playerId);
+    var upVoteCheck = hasUpVoted(userId, this._id);
+    var downVoteCheck = hasDownVoted(userId, this._id);
     if (downVoteCheck) {
+      Meteor.call('imagesUpsert', this._id, {$inc: {'voteCount': 1}});
+      Meteor.call('imagesUpsert', this._id, {$pull: {'downVotes': userId}});
       console.log('removed downvote');
-      Meteor.call('featListUpdate', {_id: gameId, 'featList.name': featName, 'featList.completedBy.featName': featName}, {$inc: {'featList.$.completedBy.0.voteCount': 1}});
-      Meteor.call('featListUpdate', {_id: gameId, 'featList.name': featName, 'featList.completedBy.featName': featName}, {$pull: {'featList.$.completedBy.0.downVotes': userId}});
-    }
-    else if (!upVoteCheck) {
+    } else if (!upVoteCheck) {
       console.log('upVoted');
-      Meteor.call('featListUpdate', {_id: gameId, 'featList.name': featName, 'featList.completedBy.featName': featName}, {$inc: {'featList.$.completedBy.0.voteCount': 1}});
-      Meteor.call('featListUpdate', {_id: gameId, 'featList.name': featName, 'featList.completedBy.featName': featName}, {$push: {'featList.$.completedBy.0.upVotes': userId}});
+      Meteor.call('imagesUpsert', this._id, {$inc: {'voteCount': 1}});
+      Meteor.call('imagesUpsert', this._id, {$push: {'upVotes': userId}});
     }
     else {
       console.log('prevented upvote');
@@ -93,25 +64,21 @@ Template.snapshots.events({
   },
 
   'click div.downvote': function(evt, template) {
-    var gameId = Session.get('currentGameId');
-    var featName = this.featName;
     var userId = Meteor.userId();
-    var playerId = this.playerId;
     
-    var upVoteCheck = hasUpVoted(gameId, featName, userId, playerId);
-    var downVoteCheck = hasDownVoted(gameId, featName, userId, playerId);
+    var upVoteCheck = hasUpVoted(userId, this._id);
+    var downVoteCheck = hasDownVoted(userId, this._id);
     if (upVoteCheck) {
-      console.log('removed upvote');
-      Meteor.call('featListUpdate', {_id: gameId, 'featList.name': featName, 'featList.completedBy.featName': featName}, {$inc: {'featList.$.completedBy.0.voteCount': -1}});
-      Meteor.call('featListUpdate', {_id: gameId, 'featList.name': featName, 'featList.completedBy.featName': featName}, {$pull: {'featList.$.completedBy.0.upVotes': userId}});
-    }
-    else if (!downVoteCheck) {
-      console.log('downVoted');
-      Meteor.call('featListUpdate', {_id: gameId, 'featList.name': featName, 'featList.completedBy.featName': featName}, {$inc: {'featList.$.completedBy.0.voteCount': -1}});
-      Meteor.call('featListUpdate', {_id: gameId, 'featList.name': featName, 'featList.completedBy.featName': featName}, {$push: {'featList.$.completedBy.0.downVotes': userId}});
+      Meteor.call('imagesUpsert', this._id, {$inc: {'voteCount': -1}});
+      Meteor.call('imagesUpsert', this._id, {$pull: {'upVotes': userId}});
+      console.log('removed downvote');
+    } else if (!downVoteCheck) {
+      console.log('downvoted');
+      Meteor.call('imagesUpsert', this._id, {$inc: {'voteCount': -1}});
+      Meteor.call('imagesUpsert', this._id, {$push: {'downVotes': userId}});
     }
     else {
-      console.log('prevented downvote');
-    }
+      console.log('prevented upvote');
+    }    
   }
 });

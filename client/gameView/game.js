@@ -49,8 +49,20 @@ Template.gameEvent.events({
       Session.set('eventImage', data);
       var gameId = Session.get('currentGameId');
       var userId = Meteor.userId();
-      
-      Meteor.call('featListUpdate', {_id: gameId, 'featList.name': featName }, {$push: {"featList.$.completedBy" : {"playerId":userId, "photoURL":data, "voteCount": 0, "featName": featName}}});
+
+      // TODO Check if the user already has a photo for this featName, gameId and playerId
+
+      Images.insert({
+                      userId: userId,
+                      username: Meteor.user().username,
+                      gameId: gameId,
+                      featName: featName,
+                      "photoURL":data,
+                      voteCount: 0,
+                      downVotes: [],
+                      upVotes: []
+                    });
+
       template.glyphIcon.set('glyphicon-ok');
     });
   }

@@ -6,7 +6,7 @@
   </h1>
 
   <div class="eventPhotos">
-    {{#each photos.featList}}
+    {{#each photos}}
       {{> featPhoto}}
     {{/each}}
   </div>
@@ -18,11 +18,9 @@
 </template>
 
 <template name="featPhoto">
-  <h3 class="feat-name">{{this.name}}</h3>
+  <h3 class="feat-name">{{featName}}</h3>
   <div class="featPhoto">
-    {{#each this.completedBy}}
       {{> snapshots}}
-    {{/each}}
   </div>
 </template>
 
