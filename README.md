@@ -5,7 +5,7 @@
 ## Team
 
   - __Product Owner__: Christian Perez
-  - __Scrum Master__: Corey Asato
+  - __Scrum Master__: Cory Asato
   - __Development Team Members__: Rene Polo, David Raleigh
 
 ## Table of Contents
