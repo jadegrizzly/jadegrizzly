@@ -4,11 +4,26 @@
  */
 Players = new Meteor.Collection('players');
 Games = new Meteor.Collection('games');
+Images = new Meteor.Collection('images');
 
 
 /**
  * Authenticate Client For DB Access
  */
+Images.allow({
+  insert: function (userId, doc) {
+    // can only create docs where you are the author
+    return true;
+  },
+  remove: function (userId, doc) {
+    // can only delete your own docs
+    return true;
+  },
+  update: function(userId, doc) {
+    return true;
+  }
+});
+
 
 Players.allow({
   insert: function (userId, doc) {
@@ -55,6 +70,10 @@ Meteor.publish('games', function() {
   return Games.find();
 });
 
+Meteor.publish('images', function() {
+  return Images.find({});
+});
+
 
 /**
  * Server Methods
@@ -71,5 +90,11 @@ Meteor.methods({
 
   featListUpdate: function(id, doc) {
     Games.update(id, doc);
+  },
+
+  imagesUpsert: function(id, doc) {
+    Images.upsert(id, doc);
   }
+
+
 });
