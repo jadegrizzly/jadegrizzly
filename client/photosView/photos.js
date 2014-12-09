@@ -1,3 +1,7 @@
+/**
+ * Photo View Helpers  
+ */
+
 Template.photos.helpers({
   photos: function() {
     var cursor =  Images.find({gameId: Session.get('currentGameId')});//gameId: Session.get('currentGameId')
@@ -25,23 +29,21 @@ Template.photos.events({
   }
 });
 
-var hasUpVoted = function(voterId, photoId)
-{
+var hasUpVoted = function(voterId, photoId) {
   var query = {'_id':photoId, 'upVotes': { $in: [ voterId ] } };
   var voteCheck = Images.findOne(query);
-  return !(voteCheck === undefined);
-}
+  return (voteCheck !== undefined);
+};
 
-var hasDownVoted = function(voterId, photoId)
-{
+var hasDownVoted = function(voterId, photoId) {
   var query = {'_id':photoId, 'downVotes': { $in: [ voterId ] } };
   var voteCheck = Images.findOne(query);
-  return !(voteCheck === undefined);            
-}
+  return (voteCheck !== undefined);
+};
 
-// TODO consolidate code
-// var hasVoted = function(gameId, featName, userId, playerId, voteType) {
-// };
+/**
+ * Helpers for each Photo
+ */
 
 Template.snapshots.events({
   'click div.upvote': function(evt, template) {
@@ -76,9 +78,8 @@ Template.snapshots.events({
       console.log('downvoted');
       Meteor.call('imagesUpsert', this._id, {$inc: {'voteCount': -1}});
       Meteor.call('imagesUpsert', this._id, {$push: {'downVotes': userId}});
-    }
-    else {
+    } else {
       console.log('prevented upvote');
-    }    
+    }
   }
 });

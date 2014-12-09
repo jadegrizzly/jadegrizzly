@@ -57,6 +57,10 @@ Template.create.events({
   }
 });
 
+/**
+ * Removes event / feat from View.
+ */
+
 Template.userEvent.events({
   'click .remove': function(evt, template) {
     Games.update(Session.get('currentGameId'), {$pull: {featList: {name: this.name}}});

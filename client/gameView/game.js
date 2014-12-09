@@ -1,3 +1,7 @@
+/**
+ * Game helper & events
+ */
+
 Template.game.helpers({
   newGame: function() {
     return Games.findOne(Session.get('currentGameId'));
@@ -15,6 +19,16 @@ Template.game.events({
   },
   'click .navigate-events': function(evt, template){
     Router.go('/game');
+  },
+  'click .go-back': function(evt, template){
+    Router.go('/create');
+  },
+
+  'click .logout': function(evt, template){
+    console.log('Logging user out...');
+    Meteor.logout(function(err) {
+      Router.go('/');
+    });
   }
 });
 
@@ -22,6 +36,7 @@ Template.game.events({
  * List item events.
  */
 
+// Created on game render.
 Template.gameEvent.created = function() {
   this.glyphIcon = new ReactiveVar;
   this.glyphIcon.set('glyphicon-pushpin');
@@ -67,17 +82,3 @@ Template.gameEvent.events({
     });
   }
 });
-
-Template.game.events({
-  'click .go-back': function(evt, template){
-    Router.go('/create');
-  },
-
-  'click .logout': function(evt, template){
-    console.log('Logging user out...');
-    Meteor.logout(function(err) {
-      Router.go('/');
-    });
-  }
-});
-
