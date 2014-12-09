@@ -35,7 +35,7 @@ From within the root directory:
 curl https://install.meteor.com/ | sh
 ```
 
-To launch the app from terminal:
+To launch the app from your terminal:
 ```
 meteor
 ```
