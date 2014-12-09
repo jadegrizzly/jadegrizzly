@@ -36,7 +36,7 @@ Template.create.events({
   },
 
   'click .cancel-game': function(evt, template) {
-    // TODO delete game from database
+    // TODO delete game from database ?
     Router.go('/menu');
   },
 
@@ -50,6 +50,10 @@ Template.create.events({
       // TODO present a message to user to define game name
       return;
     }
+
+    // TODO Prevent player from making a game with the same name twice
+    // userId + gameName should be a unique key:
+
     console.log('game started');
     Meteor.call('gamesUpsert', Session.get('currentGameId'), {$set: {gameName: value}});
 

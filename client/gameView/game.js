@@ -66,13 +66,14 @@ Template.gameEvent.events({
       var userId = Meteor.userId();
 
       // TODO Check if the user already has a photo for this featName, gameId and playerId
+      // The unique key is featName, gameId + playerId
 
       Images.insert({
                       userId: userId,
                       username: Meteor.user().username,
                       gameId: gameId,
                       featName: featName,
-                      "photoURL":data,
+                      "photoURL":data, // I don't know why photoURL is in quotes. I don't even know why it's called photoURL
                       voteCount: 0,
                       downVotes: [],
                       upVotes: []
