@@ -1,8 +1,9 @@
+// set main template
 Router.configure({
-  layoutTemplate: 'layout',
-  template: 'index'
+  layoutTemplate: 'layout'
 });
 
+// check if user is logged in
 Router.route('/', function() {
   if (Meteor.user()) {
     Router.go('/menu');
@@ -11,6 +12,7 @@ Router.route('/', function() {
   }
 });
 
+// handle routing for each view
 Router.route('/menu', function(){
   this.render('menu');
 });
@@ -35,6 +37,7 @@ Router.route('/profile', function(){
   this.render('profile');
 });
 
+// default route for invalid URL
 Router.route(/\S+/i, function() {
   Router.go('/');
 });

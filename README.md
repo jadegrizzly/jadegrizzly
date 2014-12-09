@@ -1,6 +1,6 @@
 # Snapshot Olympics
 
-> Organized photo contests for friends, family and more.
+> Organized photo scavenger hunts for friends, family and more.
 
 ## Team
 
@@ -24,21 +24,38 @@
 
 ## Requirements
 
-- Mongodb 1.4.x
-- Express 4.10.x
-- Angular 1.3.x
-- Node 0.10.x
+- meteor 1.0.x
 
 ## Development
 
 ### Installing Dependencies
 
 From within the root directory:
+```
+curl https://install.meteor.com/ | sh
+```
 
-```sh
-sudo npm install -g bower
-npm install
-bower install
+To launch the app from terminal:
+```
+meteor
+```
+
+To simulate running on iOS:
+```
+meteor install-sdk ios
+meteor add-platform ios
+meteor run  ios
+```
+To run on an iOS device:
+```
+meteor run ios-device
+```
+
+For more info on iOS or Android installation, check [here](https://meteor.com/try/7)
+
+Required packages are already installed. The full list can be found here:
+```
+.meteor/packages
 ```
 
 ### Roadmap

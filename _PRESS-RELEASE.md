@@ -17,31 +17,31 @@ Once the project moves into development, the press release can be used as a touc
  -->
 
 ## Summary ##
-  > Organize photo contests for friends, family and more.
+  > Organized photo contests for friends, family and more.
 
 ## Problem ##
-  > Wish you could have access to a collection of snapshots taken by everybody at an event? Ever wished you had an excuse to take wacky photos with all your friends?
+  > Scavenger hunt + camera = ???
 
 ## Solution ##
-  > Snapshot Olympics makes it easy to organize photo contests both publicly and privately, vote on submissions, and view collections during wrap-up.
+  > Snapshot Olympics makes it easy to organize photo contests, view submissions as they are submitted, and vote on submissions.
 
 ## From the Developers ##
   > "Really, this is about getting together with a bunch of people and taking hilarious photos to remember a day by."
 
 ## How to Get Started ##
-  1. Create a contest
-  2. Curate your own unique objectives
-  3. Invite friends if you're going private, or...
-  4. Publicly broadcast local contests
+  1. Login
+  2. Create a game
+  3. Curate your own objectives
+  4. Invite your friends
   5. Submissions get displayed in real-time
-  6. View and download the entire collection
+  6. Vote!
 
 ## From the Users ##
-  * "My husband and I set up a hunt for our family and friends on our wedding day... Priceless. We hired a professional but when we look back on it all, the moments captured by our very own best friends mean a lot more to us. It was a big hit with everyone who participated."
+  * "My husband and I set up a game for our family and friends on our wedding day... Priceless. We hired a professional but when we look back on it all, the moments captured by our very own best friends mean a lot more to us. It was a big hit with everyone who participated."
 
   * "Our company launch party was a bit out of control. Suffice to say our team has no shortage of inside jokes thanks to the hunt we set up with Snapshot Olympics."
 
-  * "A bunch of my friends and I are all hobby photographers. We love to pick a day, pick a place, pick a theme and just a take a bunch of photos! Photo Olympics adds an element of competition that really inspires us to up our game."
+  * "A bunch of my friends and I are all hobby photographers. We love to pick a day, pick a place, pick a theme and just a take a bunch of photos! Snapshot Olympics adds an element of competition that really inspires us to up our game."
 
 ## Call to Action ##
-  > No more excuses. Take ALL the silly photos.
+  > Keep it weird.
