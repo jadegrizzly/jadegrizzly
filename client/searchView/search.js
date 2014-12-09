@@ -24,6 +24,11 @@ Template.search.events({
     var gameId = Games.findOne({gameName: gameName});
 
     Session.set('currentGameId', gameId._id);
+
+    // TODO check if the player is already a participant in this game, if they're not
+    // then push their name into the participants array, similar to below
+    // Meteor.call('playersUpsert', Meteor.userId(), {$push:{'gameList':id}});
+    
     Router.go('/game');
   }
 });

@@ -11,6 +11,9 @@ Meteor.subscribe('players');
 Meteor.subscribe('users');
 Meteor.subscribe('games');
 
+// This code is an attempt to move away from autopublish.
+// originally it was:
+// Meteor.subscribe('images');
 Session.set('data_loaded', false);
 Tracker.autorun(function() {  
   if (Session.get('query')) {
